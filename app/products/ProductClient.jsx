@@ -125,6 +125,7 @@ const Page = () => {
                   : "text-black border-[#00537B] hover:bg-[#00537B] hover:text-white transition"
               }`}
             >
+              
               Next
             </button>
           </div>
