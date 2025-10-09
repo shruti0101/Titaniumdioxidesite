@@ -44,7 +44,7 @@ const Page = () => {
           >
             Home / All Products
           </Link>
-          <h1 className="text-5xl md:text-6xl  font-extrabold mt-4 tracking-tight drop-shadow-lg">
+          <h1 className="text-5xl font-serif md:text-6xl  font-extrabold mt-4 tracking-tight drop-shadow-lg">
        All Products
           </h1>
   

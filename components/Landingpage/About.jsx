@@ -46,8 +46,8 @@ export default function AboutUs() {
 
   return (
     <section
-      style={{ backgroundImage: "url(https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726382/bg-layer_xpdfhz.webp)" }}
-      className="relative bg-[#FFFEF7] bg-center bg-cover py-8"
+    
+      className="relative   bg-center bg-cover pb-3 md:py-8"
     >
       {/* Decorative background image */}
       <Image
@@ -67,10 +67,10 @@ export default function AboutUs() {
 
         {/* Right content (text + button + contact) */}
         <div>
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900">
+          <h2 className="font-serif text-2xl lg:text-4xl font-bold text-gray-900">
          About Us - 
           </h2>
-          <h1 className="text-[#F7C600] font-bold text-2xl lg:text-4xl mb-2 md:mb-6">
+          <h1 className="text-[#F7C600]  font-bold text-2xl lg:text-4xl mb-2 md:mb-6">
            Titanium Dioxide wholesaler
           </h1>
 

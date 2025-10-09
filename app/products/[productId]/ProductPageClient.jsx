@@ -26,7 +26,7 @@ export default function ProductPage({ params }) {
       {/* Hero Banner */}
       <section className="relative w-full h-[50vh] md:h-[80vh] bg-cover bg-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759831101/banner_lklwmi.webp')" }}>
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="bg-white text-[#B57E1F] text-2xl md:text-5xl p-2 rounded font-bold">{product.name}</h1>
+          <h1 className="bg-white font-serif text-[#B57E1F] text-2xl md:text-5xl p-2 rounded font-bold">{product.name}</h1>
         </div>
       </section>
 
@@ -54,7 +54,7 @@ export default function ProductPage({ params }) {
 
           {/* Specifications Card */}
           <div className=" bg-white rounded-xl shadow-lg p-6 md:p-10">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#B57E1F] border-b pb-2">Product Specifications</h2>
+            <h2 className="text-2xl  md:text-3xl font-semibold mb-6 text-[#B57E1F] border-b pb-2 font-serif">Product Specifications</h2>
             <div className="overflow-x-auto">
               <table className="w-full  border-collapse">
                 <tbody>
@@ -96,7 +96,7 @@ export default function ProductPage({ params }) {
 <div className="flex flex-col lg:flex-row gap-5">
   {/* Product Description */}
   <div className="lg:w-2/2 bg-white rounded-xl shadow-lg p-6 md:p-10 overflow-y-auto max-h-[700px]">
-    <h2 className="text-2xl md:text-4xl font-semibold text-[#B57E1F] mb-6 border-b pb-2">Product Description</h2>
+    <h2 className="text-2xl md:text-4xl font-semibold text-[#B57E1F] mb-6 border-b pb-2 font-serif">Product Description</h2>
     <div className="space-y-10">
       {Array.isArray(product.description) ? (
         product.description.map((block, i) => {

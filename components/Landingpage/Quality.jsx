@@ -57,10 +57,10 @@ export default function QualityTabs() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Intro Text */}
         <div className="text-center mb-3 md:mb-10 z-40 ">
-          <h2 className="text-3xl relative md:text-5xl font-extrabold text-white mb-6">
+          <h2 className="font-serif text-3xl relative md:text-5xl font-extrabold text-white mb-6">
             Quality Assurance
 
-             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 md:w-24 h-1 bg-[#F8CC19] rounded-full"></span>
+             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 md:w-26 h-1 bg-[#F8CC19] rounded-full"></span>
           </h2>
           <p className="text-white font-semibold text-md md:text-lg max-w-3xl mx-auto">
             At Aanya Enterprise, we believe that the foundation of a trusted

@@ -11,7 +11,7 @@ const Certificates = () => {
   return (
     <section className="w-full relative bg-[#FEF3E2] py-8 sm:py-10 px-4 sm:px-6 md:px-12">
       {/* Heading */}
-      <h2 className="font-bold relative text-3xl sm:text-4xl md:text-5xl mb-5 sm:mb-16 text-center text-gray-900">
+      <h2 className="font-bold font-serif relative text-3xl sm:text-4xl md:text-5xl mb-5 sm:mb-16 text-center text-gray-900">
         Our Certificates
         <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 sm:w-20 md:w-24 h-1 bg-[#F8CC19] rounded-full"></span>
       </h2>

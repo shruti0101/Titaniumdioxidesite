@@ -1,8 +1,8 @@
 import ProductClient from "./ProductClient";
 
 export const metadata = {
-  title: "#1 New Delhi Best Paper Cup Making Machine Supplier in India",
-  description: "Explore a wide range of high-quality printing machines by SBS Machinery. Leading manufacturer & supplier of advanced printing solutions in India.",
+  title: "Bulk Titanium Dioxide Powder (TiO2) Wholesaler",
+  description: "High-purity Titanium Dioxide (TiO2) for Paints, Plastics, & Coatings. Bulk Wholesaler of Anatase & Rutile grades with CoA/SDS. Request a Quote for your next order.",
 };
 
 export default function AboutUsPage() {

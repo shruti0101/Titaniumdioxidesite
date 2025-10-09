@@ -3,14 +3,50 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const slides = [
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819269/70_hdiyek.webp", alt: "Caustic Soda", cat: "Caustic Soda" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819180/31_fnfc32.webp", alt: "Kronos", cat: "Titanium Dioxide" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819273/74_s6lfhw.webp", alt: "Carbon", cat: "Carbon" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819249/64_pinccw.webp", alt: "Lithopone", cat: "Lithopone" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819188/42_c4yyda.webp", alt: "Rutile Titanium", cat: "Rutile Titanium" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819254/67_iyklmr.webp", alt: "Optical Brighter", cat: "Optical Brighter" },
-  { src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819276/76_uskxxg.webp", alt: "Calcium Carbonate", cat: "Calcium Carbonate" },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819269/70_hdiyek.webp",
+    alt: "Caustic Soda",
+    cat: "Caustic Soda",
+    link:"/categories/caustic-soda"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819180/31_fnfc32.webp",
+    alt: "Kronos",
+    cat: "Titanium Dioxide",
+     link:"/categories/titanium-dioxide-tiO2"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819273/74_s6lfhw.webp",
+    alt: "Carbon",
+    cat: "Carbon",
+     link:"/categories/carbon"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819249/64_pinccw.webp",
+    alt: "Lithopone",
+    cat: "Lithopone",
+     link:"/categories/lithopone"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819188/42_c4yyda.webp",
+    alt: "Rutile Titanium",
+    cat: "Rutile Titanium",
+     link:"/categories/titanium-dioxide-rutile"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819254/67_iyklmr.webp",
+    alt: "Optical Brighter",
+    cat: "Optical Brighter",
+       link:"/categories/optical-brighter"
+  },
+  {
+    src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819276/76_uskxxg.webp",
+    alt: "Calcium Carbonate",
+    cat: "Calcium Carbonate",
+        link:"/categories/calcium-carbonate"
+  },
 ];
 
 export default function ProductCategorySection() {
@@ -55,13 +91,13 @@ export default function ProductCategorySection() {
   return (
     <section className="relative pb-10 bg-[#FFFEF7]">
       {/* Header */}
-      <div className="max-w-7xl px-2 mx-auto grid grid-cols-1 md:grid-cols-2">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
         {/* Left side */}
         <div className="bg-[#FFFEF7] p-6 sm:p-12 flex flex-col justify-center">
           <p className="uppercase text-sm sm:text-base tracking-widest text-gray-500">
             Explore Our Category
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#00353F] mt-3">
+          <h2 className="text-3xl font-serif sm:text-4xl md:text-5xl font-bold text-[#00353F] mt-3">
             Take A Look At Our Categories
           </h2>
         </div>
@@ -69,7 +105,8 @@ export default function ProductCategorySection() {
         {/* Right side */}
         <div
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726390/noise_wjihwt.webp')",
+            backgroundImage:
+              "url('https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726390/noise_wjihwt.webp')",
           }}
           className="bg-[#00353F] text-white p-6  sm:p-12 flex flex-col justify-center relative"
         >
@@ -114,10 +151,14 @@ export default function ProductCategorySection() {
           .map((slide, i) => (
             <div key={i} className="flex flex-col items-center group">
               {/* Card */}
-              <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] group overflow-hidden rounded-md shadow-md">
+              <Link
+                href={slide.link}
+                className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] group overflow-hidden rounded-md shadow-md"
+              >
                 <Image
                   src={slide.src}
                   alt={slide.alt}
+                  title={slide.alt}
                   fill
                   className="object-contain transform transition-transform duration-500 group-hover:scale-110"
                 />
@@ -132,7 +173,7 @@ export default function ProductCategorySection() {
                     {slide.cat}
                   </p>
                 </div>
-              </div>
+              </Link>
 
               {/* Name below card */}
               <p

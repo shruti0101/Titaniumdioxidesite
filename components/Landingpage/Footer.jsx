@@ -11,18 +11,21 @@ import {
   Youtube,
   Linkedin,
 } from "lucide-react";
+import { useState } from "react";
 
 const products = [
-  { name: "Titanium Dioxide (TiO₂)", href: "/products/tio2" },
-  { name: "Titanium Dioxide Rutile", href: "/products/tio2-rutile" },
-  { name: "Lithopone", href: "/products/lithopone" },
-  { name: "Optical Brighter", href: "/products/optical-brighter" },
-  { name: "Caustic Soda", href: "/products/caustic-soda" },
-  { name: "Carbon", href: "/products/carbon" },
-  { name: "Calcium Carbonate", href: "/products/calcium-carbonate" },
+  { name: "Titanium Dioxide (TiO₂)", href: "/categories/titanium-dioxide-tiO2" },
+  { name: "Titanium Dioxide Rutile", href: "/categories/titanium-dioxide-rutile" },
+  { name: "Lithopone", href: "/categories/lithopone" },
+  { name: "Optical Brighter", href: "/categories/optical-brighter" },
+  { name: "Caustic Soda", href: "/categories/caustic-soda" },
+  { name: "Carbon", href: "/categories/carbon" },
+  { name: "Calcium Carbonate", href: "/categories/calcium-carbonate" },
 ];
 
 const Footer = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer
       className="relative text-gray-300 pt-16 pb-8 bg-cover bg-center"
@@ -34,8 +37,8 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#D33F00] via-orange-400 to-[#D33F00]"></div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
+      <div className="relative w-full mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 md:gap-7">
           {/* Column 1: About Us */}
           <div>
             <Image
@@ -45,7 +48,7 @@ const Footer = () => {
               height={50}
               className="mb-6"
             />
-            <h3 className="text-white font-semibold text-xl mb-4">About Us</h3>
+            <h3 className="text-white font-semibold text-xl mb-4 font-serif">About Us</h3>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
               At Aanya Enterprises, we are proud to be recognised as one of
               India’s most trusted suppliers and importers of premium-grade
@@ -54,8 +57,8 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Explore Links */}
-          <div>
-            <h3 className="text-white font-semibold text-xl mb-4">Explore Links</h3>
+          <div> 
+            <h3 className="text-white font-semibold text-xl mb-4 font-serif">Explore Links</h3>
             <ul className="space-y-2 text-base md:text-lg text-white">
               {[
                 { name: "Home", href: "/" },
@@ -81,7 +84,7 @@ const Footer = () => {
 
           {/* Column 3: Our Products */}
           <div>
-            <h3 className="text-white font-semibold text-xl mb-4">Our Products</h3>
+            <h3 className="text-white font-semibold text-xl mb-4 font-serif">Our Products</h3>
             <ul className="space-y-2 text-base md:text-lg text-white">
               {products.map((p, i) => (
                 <li key={i}>
@@ -98,9 +101,9 @@ const Footer = () => {
 
           {/* Column 4: Contact Us */}
           <div>
-            <h3 className="text-white font-semibold text-xl mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold text-xl mb-4 font-serif">Contact Us</h3>
             <div className="flex items-start gap-3 mb-4">
-              <MapPin className="w-6 h-6 text-[#F7C600]" />
+              <MapPin className="w-11 h-11 text-[#F7C600]" />
               <p className="text-base md:text-lg text-gray-200 leading-relaxed">
                 Plot No 67/2 Kh. No. 154 Village Pooth Khurd, New Delhi – 110039,
                 Delhi, India
@@ -134,6 +137,48 @@ const Footer = () => {
               ))}
             </div>
           </div>
+
+
+  {/* Trust Elite Section */}
+        <div className="px-6  items-center md:pb-8">
+          <div>
+            <h3 className="text-xl font-serif text-white font-semibold  mb-3">
+              Trust Elite Certificate
+            </h3>
+            <p className="text-base text-white leading-relaxed">
+            We are proud to present the TrustElite Certificate of Excellence to Aanya Enterprises , recognizing their commitment to exceptional customer service, outstanding business practices, and a dedication to building trust with their customers.
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726401/trustseal_vltgii.webp"
+              alt="Trust Elite"
+              className="w-28 h-28 object-contain cursor-pointer hover:scale-105 transition"
+              onClick={() => setIsModalOpen(true)}
+            />
+
+            {/* Modal */}
+            {isModalOpen && (
+              <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                <div className="relative">
+                  <button
+                    className="absolute top-2 right-2 text-white text-2xl font-bold"
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    ✕
+                  </button>
+                  <img
+                    src="/cert.webp"
+                    alt="Trust Elite Full"
+                    className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+
         </div>
       </div>
 
@@ -142,7 +187,7 @@ const Footer = () => {
         <p>Copyright © 2025 Aanya Enterprises. All Rights Reserved.</p>
         <p className="mt-1">
        Website Designed  By Promozione Branding Pvt. Ltd.
-          <a href="https://promozionebranding.com/" className="text-[#F7C600] cursor-pointer  underline"> Website Designing Company.</a>
+          <a href="https://promozionebranding.com/" className="text-[#F7C600] cursor-pointer  underline font-serif"> Website Designing Company.</a>
         </p>
       </div>
     </footer>

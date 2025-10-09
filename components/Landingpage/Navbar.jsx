@@ -159,7 +159,7 @@ export default function Navbar() {
                       <Link
                         key={cat.id}
                         href={`/categories/${cat.id}`}
-                        className={`block cursor-pointer text-lg  px-3 py-2  transition-all  hover:bg-[#F7C600]
+                        className={`block cursor-pointer text-lg  px-3 py-3  transition-all  hover:bg-[#F7C600]
                       
                       
                     `}

@@ -1,60 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 
 const EnquiryForm = () => {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#F6DB9C] w-full py-12 px-4  overflow-hidden">
-      {/* Animated Atom - Top Right */}
-      <motion.div
-        className="hidden md:block absolute top-0 right-0 z-0"
-        animate={{
-          y: [0, -20, 0], // float up-down
-          rotate: [0, 10, 0], // slight rotation
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759728055/ChatGPT_Image_Oct_3_2025_06_09_31_PM_qgguyj.png"
-          width={200}
-          height={200}
-          alt="Floating Atom"
-          className="z-40"
-          
-        />
-      </motion.div>
+    <section   style={{ backgroundImage: "url(https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726382/bg-layer_xpdfhz.webp)" }} className="relative bg-center bg-cover w-full py-12 px-4 ">
 
-      {/* Animated Atom - Left Side */}
-      <motion.div
-        className="hidden md:block absolute top-40 left-0 z-40"
-        animate={{
-          y: [0, 25, 0],
-          rotate: [0, -10, 0],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <Image
-          src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759728055/ChatGPT_Image_Oct_3_2025_06_09_31_PM_qgguyj.png"
-          width={200}
-          height={200}
-          alt="Floating Atom"
-        
-      
-        />
-      </motion.div>
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-800 mb-6">
           Quality You Can Trust
         </h2>
 

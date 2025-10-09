@@ -13,23 +13,23 @@ export default function WhyChooseUs() {
             backgroundSize: "200px",
             mixBlendMode: "multiply",
           }}
-          className=" bg-[#F7C600] opacity-90 flex items-center justify-center lg:col-span-2 px-4 py-8"
+          className="bg-[#F7C600] opacity-90 flex items-center justify-center lg:col-span-2 px-4 py-8"
         >
-          <div className=" relative w-full max-w-lg lg:max-w-full">
+          <div className="relative w-full ">
             <Image
               src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759735071/ChatGPT_1_rzzrrm.webp"
               alt="Why Choose Us"
               width={1000}
               height={1000}
-              className="relative w-full h-auto object-cover lg:absolute lg:-top-80 lg:left-13"
+              className="relative w-full max-h-[500] md:max-h-[650px]   object-cover lg:absolute lg:-top-80 lg:left-13"
             />
           </div>
         </div>
 
         {/* Right Half - Content */}
-        <div className="px-4 sm:px-8 md:px-16 py-8 flex flex-col justify-center lg:col-span-3">
+        <div className="px-4 sm:px-8 md:px-16 py-4 md:py-8 flex flex-col justify-center lg:col-span-3">
           <div className="text-center md:text-start mb-6">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight relative inline-block">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-gray-900 tracking-tight relative inline-block">
               Why <span className="text-[#F8CC19]">Choose Us</span>
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 md:w-24 h-1 bg-[#F8CC19] rounded-full"></span>
             </h2>

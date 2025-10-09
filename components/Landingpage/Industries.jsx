@@ -1,15 +1,15 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import {
   FaIndustry,
   FaCogs,
-  FaFlask,
+
   FaCube,
-  FaBolt,
+  
   FaOilCan,
   FaPills,
   FaPaintRoller,
-  FaTruck,
+
   FaBuilding,
   FaDraftingCompass,
 } from "react-icons/fa";
@@ -82,28 +82,22 @@ export default function IndustryGrid() {
     <section className="relative mt-16">
       {/* Heading */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight relative inline-block">
+        <h2 className="font-serif text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight relative inline-block">
           Industries <span className="text-[#F8CC19]">We Serve</span>
-          <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 md:w-24 h-1 bg-[#F8CC19] rounded-full"></span>
+          <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 md:w-26 h-1 bg-[#F8CC19] rounded-full"></span>
         </h2>
       </div>
 
       {/* Main Section */}
-      <section className="relative w-full flex flex-col lg:flex-row">
-        {/* Background Image */}
-        <Image
-          src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726389/industry_wpeuig.webp"
-          alt="Factory"
-          width={1400}
-          height={500}
-          className="absolute w-full h-full object-cover -z-10"
-        />
-        <div className="absolute inset-0 bg-[#0A3A49]/40 -z-10"></div>
+      <section style={{backgroundImage:"url(https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726389/industry_wpeuig.webp)"}} className="relative bg-center bg-cover w-full flex flex-col lg:flex-row">
+     
+     
+        <div className="absolute inset-0 bg-[#0A3A49]/40 z-10 "></div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 flex items-center justify-start px-6 md:px-10 py-12">
+        <div className="w-full lg:w-1/2 flex items-center justify-start px-6 md:px-10 py-12 z-30">
           <div className="max-w-lg">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 animate-bounce leading-tight">
+            <h2 className="text-3xl font-serif sm:text-4xl md:text-6xl font-bold text-white mb-6 animate-bounce leading-tight">
               Titanium Dioxide Wholesaler
             </h2>
             <p className="text-white text-base md:text-lg leading-relaxed mb-6">
@@ -116,24 +110,28 @@ export default function IndustryGrid() {
               </strong>{" "}
               making us the preferred choice for manufacturers across diverse sectors.
             </p>
-            <ul className="space-y-2 text-base md:text-lg text-white">
-              <li><span className="text-yellow-400">✦</span> Superior whiteness & brightness</li>
-              <li><span className="text-yellow-400">✦</span> Trusted across multiple industries</li>
-              <li><span className="text-yellow-400">✦</span> Consistent bulk supply</li>
+            <ul className="space-y-2 text-base md:text-lg text-white ">
+              <li><span className="text-yellow-400 text-xl">✦</span> Superior whiteness & brightness</li>
+              <li><span className="text-yellow-400 text-xl">✦</span> Trusted across multiple industries</li>
+              <li><span className="text-yellow-400 text-xl">✦</span> Consistent bulk supply</li>
             </ul>
-            <button className="mt-8 relative px-6 py-3 font-semibold bg-[#F7C600] text-white cursor-pointer transition-all duration-700 before:content-[''] before:absolute before:inset-0 before:border before:border-[#F7C600] before:transition-transform before:duration-500 before:ease-in-out before:translate-y-2 before:translate-x-2 hover:before:-translate-y-1 hover:before:-translate-x-2">
+
+            <Link href="/contact-us">
+                  <button className="mt-8 relative px-6 py-3 font-semibold bg-[#F7C600] text-white cursor-pointer transition-all duration-700 before:content-[''] before:absolute before:inset-0 before:border before:border-[#F7C600] before:transition-transform before:duration-500 before:ease-in-out before:translate-y-2 before:translate-x-2 hover:before:-translate-y-1 hover:before:-translate-x-2">
               Know More
             </button>
+            </Link>
+      
           </div>
         </div>
 
         {/* Right Grid */}
-        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 px-3">
+        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 z-30 px-2 md:px-0">
           {items.map((item, i) => (
             <a
               href="#"
               key={i}
-              className="relative group overflow-hidden flex flex-col items-center justify-center p-2 min-h-[180px] sm:min-h-[250px] md:min-h-[250px]"
+              className="relative group overflow-hidden flex flex-col items-center justify-center p-2 min-h-[160px] sm:min-h-[190px] md:min-h-[220px]"
             >
               {/* Background */}
               <div

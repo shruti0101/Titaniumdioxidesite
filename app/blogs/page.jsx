@@ -1,8 +1,8 @@
 import BlogClient from "./BlogClient";
 
 export const metadata = {
-  title: "Our Blogs - sbsmachinery.in",
-  description: "In a world shifting rapidly toward sustainability, paper cups are no longer just a convenience—they’re a statement. As single-use plastic bans tighten …",
+  title: "Chemical Solutions & R&D Insights |Aanya Enterprise Blog",
+  description: "Explore the latest in the chemical industry. Get expert analysis on market trends, B2B chemical supply chain, and R&D innovations. Read the latest.",
 };
 
 export default function AboutUsPage() {

@@ -5,9 +5,9 @@ export const categories = [
   {
      id: "titanium-dioxide-tiO2",
   name: "Titanium Dioxide TiO₂",
-  metaTitle: "Titanium Dioxide TiO₂ – High-Quality White Pigment for Paints, Plastics & Coatings ",
+  metaTitle: "Bulk Titanium Dioxide Wholesaler - Rutile & Anatase Powder ",
   metaDescription:
-    "Discover premium Titanium Dioxide (TiO₂) offering exceptional brightness, opacity, and durability. Ideal for paints, coatings, plastics, paper, cosmetics, and industrial applications. Get consistent high-purity TiO₂ from Aanya Enterprises",
+    "Buy bulk tio2 for coatings, plastics, and paper. High-performance white pigment and UV protection. View specs and Request a Quote today!",
 
 
     products: [
@@ -3371,9 +3371,9 @@ export const categories = [
 {
   id: "titanium-dioxide-rutile",
   name: "Titanium Dioxide Rutile",
-  metaTitle: "Titanium Dioxide Rutile – High-Quality White Pigment for Industrial Applications ",
+  metaTitle: "Bulk Rutile Titanium Dioxide Wholesaler - R-996, R-990 Grades ",
   metaDescription:
-    "Explore premium Titanium Dioxide Rutile with exceptional brightness, opacity, and durability. Ideal for paints, coatings, plastics, paper, cosmetics, and more. Get high-purity TiO₂ for superior performance and consistent quality from Aanya Enterprises",
+    "Source high-opacity Rutile Titanium Dioxide for paints, plastics, and coatings. Superior weather resistance and brightness. Reliable bulk supply and competitive pricing. Request a Quote!",
 
   products: [
     // product 1
@@ -3543,9 +3543,9 @@ export const categories = [
 {
    id: "optical-brighter",
   name: "Optical Brighter",
-  metaTitle: "Optical Brightener – High-Performance Whitening Agent for Paper, Textiles & Plastics ",
+  metaTitle: "Bulk Optical Brighteners for Paper, Textile & Detergents ",
   metaDescription:
-    "Discover premium Optical Brighteners that enhance whiteness and brightness in paper, textiles, detergents, and plastics. Improve product appearance and color brilliance with high-quality Optical Brighteners from Aanya Enterprises",
+    "Find premium Optical Brightening Agents (OBA) to enhance whiteness and brightness in textiles, paper, and laundry detergents. See technical specifications and order a sample",
 
   products: [
     // product 1
@@ -3670,9 +3670,9 @@ export const categories = [
 {
     id: "lithopone",
   name: "Lithopone",
-  metaTitle: "Lithopone – High-Quality White Pigment for Paints, Plastics & Coatings ",
+  metaTitle: "Buy Lithopone Pigment – Aanya Enterprise ",
   metaDescription:
-    "Get premium Lithopone pigment offering excellent whiteness, opacity, and dispersion. Ideal for paints, coatings, plastics, rubber, and inks. Choose Aanya Enterprises for consistent quality and superior performance Lithopone solutions.",
+    "Lithopone Category	Buy Lithopone Pigment – Aanya Enterprise	Source high-quality Lithopone for paints, rubber, and plastics. A cost-effective white pigment alternative to TiO2. Check product grades and pricing now.",
 
   products: [
     // product 1

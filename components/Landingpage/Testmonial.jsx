@@ -46,7 +46,7 @@ export default function TestimonialSlider() {
   return (
     <section className="relative h-full w-full bg-[#F7DF86] py-5 md:py-12 text-white overflow-hidden">
       <div className="relative max-w-5xl mx-auto text-center px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-8">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-3 md:mb-8">
           <span className="text-white">Client </span>
           <span className="text-black">Testimonials</span>
         </h2>
@@ -65,7 +65,7 @@ export default function TestimonialSlider() {
             </p>
             <div className="flex flex-col items-center mt-4">
               
-              <h4 className="text-xs sm:text-base md:text-lg font-semibold text-black">
+              <h4 className="text-xs sm:text-base md:text-lg font-serif font-semibold text-black">
                 {current.name}
               </h4>
             </div>

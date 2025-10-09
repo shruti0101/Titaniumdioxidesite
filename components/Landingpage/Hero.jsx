@@ -1,85 +1,92 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+const slides = [
+  {
+    desktop: "/desk-banner-2.webp",
+    mobile: "/bg2.jpg",
+    alt: "Slide 1",
+    name:"Titanium Dioxide"
+  },
+  {
+    desktop: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726384/home1_rtnart.webp",
+    mobile: "/mobile-1.webp",
+    alt: "Slide 2",
+     name:"Titanium Dioxide"
+  },
+  {
+    desktop: "/desk-banner.webp",
+    mobile: "/mobile-2.webp",
+    alt: "Slide 3",
+     name:"Titanium Dioxide"
+  },
+];
+
 const ArrowCarousel = () => {
+  const [current, setCurrent] = useState(0);
+
+  // Auto-slide every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () =>
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+
   return (
-    <div className="carousel w-full">
-      {/* Slide 1 */}
-      <div id="slide1" className="carousel-item relative w-full">
-        <Image
-          src="/home2.webp"
-          alt="Slide 1"
-          width={1200}
-          height={600}
-          className="w-full object-cover"
-        />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide4" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
+    <div className="relative w-full overflow-hidden bg-[#F3F5F7]">
+      {/* Slides container */}
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="w-full flex-shrink-0 relative">
+            {/* Desktop Image */}
+            <Image
+              src={slide.desktop}
+              alt={slide.alt}
+              title={slide.name}
+            width={1200} height={600}
+              className="hidden md:block w-full object-contain"
+              priority
+            />
+
+            {/* Mobile Image */}
+            <Image
+              src={slide.mobile}
+              alt={slide.alt + " Mobile"}
+              width={600}
+              height={1200}
+              className="block md:hidden w-full mt-24 object-cover"
+              priority
+            />
+          </div>
+        ))}
       </div>
 
-      {/* Slide 2 */}
-      <div id="slide2" className="carousel-item relative w-full">
-        <Image
-          src="/home1.webp"
-          alt="Slide 2"
-          width={1200}
-          height={600}
-          className="w-full object-cover"
-        />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide1" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
+      {/* Arrows */}
+      <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-8">
+        <button
+          onClick={prevSlide}
+          className="btn btn-circle bg-white/50 hover:bg-white"
+        >
+          ❮
+        </button>
+        <button
+          onClick={nextSlide}
+          className="btn btn-circle bg-white/50 hover:bg-white"
+        >
+          ❯
+        </button>
       </div>
 
-      {/* Slide 3 */}
-      <div id="slide3" className="carousel-item relative w-full">
-        <Image
-          src="/home2.webp"
-          alt="Slide 3"
-          width={1200}
-          height={600}
-          className="w-full object-cover"
-        />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-
-      {/* Slide 4 */}
-      <div id="slide4" className="carousel-item relative w-full">
-        <Image
-          src="/home1.webp"
-          alt="Slide 4"
-          width={1200}
-          height={600}
-          className="w-full object-cover"
-        />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide3" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
+ 
     </div>
   );
 };
