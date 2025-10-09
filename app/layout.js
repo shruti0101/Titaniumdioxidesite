@@ -1,7 +1,7 @@
 import { Outfit } from "next/font/google";  
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-
+import Script from "next/script";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
