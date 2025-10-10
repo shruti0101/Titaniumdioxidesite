@@ -85,7 +85,7 @@ export async function GET() {
         <lastmod>${
           blog.date ? new Date(blog.date).toISOString() : new Date().toISOString()
         }</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.6</priority>
       </url>
     `

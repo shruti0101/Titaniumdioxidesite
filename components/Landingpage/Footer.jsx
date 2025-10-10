@@ -64,11 +64,11 @@ const Footer = () => {
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about-us" },
                 { name: "Our Products", href: "/products" },
-                { name: "Our Blog", href: "/blog" },
+                { name: "Our Blog", href: "/blogs" },
                 { name: "Contact Us", href: "/contact-us" },
-                { name: "Privacy Policy", href: "/privacy-policy" },
-                { name: "Terms & Conditions", href: "/terms" },
-                { name: "Refund & Returns Policy", href: "/refund-policy" },
+                // { name: "Privacy Policy", href: "/privacy-policy" },
+                // { name: "Terms & Conditions", href: "/terms" },
+              
               ].map((link, i) => (
                 <li key={i}>
                   <Link
@@ -112,15 +112,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-[#F7C600]" />
-                <span className="text-white">+91-85275 57778</span>
+                <a href="tel:+918527557778" className="text-white underline">+91-85275 57778</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-[#F7C600]" />
-                <span className="text-white">+91-89201 09583</span>
+                <a href="tel:+918920109583" className="text-white underline">+91-89201 09583</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-[#F7C600]" />
-              <a href="mailto:sales@aanyaenterprise.com">sales@aanyaenterprise.com</a>
+              <a href="mailto:sales@aanyaenterprise.com ">sales@aanyaenterprise.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-[#F7C600]" />
