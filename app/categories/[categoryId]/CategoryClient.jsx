@@ -45,7 +45,7 @@ export default function CategoryPage({ params }) {
                   src={product.image[0]?.src || "/placeholder.png"}
                   alt={product.image[0]?.alt || product.name}
                   title={product.name}
-                  width={300}
+                  width={400}
                   height={300}
                   className="object-contain"  
                   unoptimized

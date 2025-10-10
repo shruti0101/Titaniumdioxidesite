@@ -28,7 +28,7 @@ export default function Navbar() {
       label: "Products",
       link: "/products",
       dropdown: [
-        "Titanium Dioxide (TiO₂)",
+        "Titanium Dioxide TiO2", 
         "Titanium Dioxide Rutile",
         "Lithopone",
         "Optical Brighter",
@@ -67,15 +67,15 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2 border-l pl-4">
               <Mail size={16} />
-              <span>sales@aanyaenterprise.com</span>
+             <a href="mailto:sales@aanyaenterprise.com">sales@aanyaenterprise.com</a>
             </div>
             <div className="flex items-center gap-2 border-l pl-4">
               <Phone size={16} />
-              <span>+91-85275 57778</span>
+              <a href="tel:+9185275205777">+91-85275 57778</a>
             </div>
             <div className="flex items-center gap-2 border-l pl-4">
               <Phone size={16} />
-              <span>+91-89201 09583</span>
+              <a href="tel:+918920109583">+91-89201 09583</a>
             </div>
           </div>
 
@@ -240,7 +240,7 @@ export default function Navbar() {
                           {item.dropdown.map((d, i) => (
                             <Link
                               key={i}
-                              href={`/products/${d
+                              href={`/categories/${d
                                 .replace(/\s+/g, "-")
                                 .toLowerCase()}`}
                               className="block py-1 text-sm hover:text-yellow-400"
@@ -264,12 +264,16 @@ export default function Navbar() {
               ))}
 
               <div className="pt-6 space-y-3">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+                <button onClick={() => setIsFormOpen(true)}  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
                   Request a Quote
                 </button>
+                
+                <Link    onClick={() => setMobileNavOpen(false)} href="/contact-us">
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
                   Contact Us
                 </button>
+                </Link>
+
               </div>
             </div>
           </div>

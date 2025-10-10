@@ -4,20 +4,20 @@ import Image from "next/image";
 
 const slides = [
   {
-    desktop: "/desk-banner-2.webp",
-    mobile: "/bg2.jpg",
+    desktop: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760072255/desk-banner-2_aekeg9.webp",
+    mobile: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760072289/mobile-2_uvkqov.webp",
     alt: "Slide 1",
     name:"Titanium Dioxide"
   },
   {
     desktop: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726384/home1_rtnart.webp",
-    mobile: "/mobile-1.webp",
+    mobile: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760072289/mobile-1_vjnmtq.webp",
     alt: "Slide 2",
      name:"Titanium Dioxide"
   },
   {
-    desktop: "/desk-banner.webp",
-    mobile: "/mobile-2.webp",
+    desktop: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760072256/desk-banner_mjl3as.webp",
+    mobile: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760072256/bg2_fa1vlu.jpg",
     alt: "Slide 3",
      name:"Titanium Dioxide"
   },

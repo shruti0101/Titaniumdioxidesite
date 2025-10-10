@@ -57,7 +57,7 @@ export default function ProductCategorySection() {
 
   useEffect(() => {
     const updateVisibleSlides = () => {
-      if (window.innerWidth < 640) setVisibleSlides(2);
+      if (window.innerWidth < 640) setVisibleSlides(4);
       else if (window.innerWidth < 1024) setVisibleSlides(2);
       else setVisibleSlides(4);
     };
@@ -89,7 +89,7 @@ export default function ProductCategorySection() {
   }, [visibleSlides]);
 
   return (
-    <section className="relative pb-10 bg-[#FFFEF7]">
+    <section className="relative py-10 bg-[#FFFEF7]">
       {/* Header */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
         {/* Left side */}
@@ -145,7 +145,7 @@ export default function ProductCategorySection() {
       </div>
 
       {/* Slider */}
-      <div className="grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 mt-6">
+      <div className="grid  grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 mt-6">
         {slides
           .slice(startIndex, startIndex + visibleSlides)
           .map((slide, i) => (
@@ -153,14 +153,14 @@ export default function ProductCategorySection() {
               {/* Card */}
               <Link
                 href={slide.link}
-                className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] group overflow-hidden rounded-md shadow-md"
+                className="relative w-full h-[205px] sm:h-[250px] md:h-[320px] group overflow-hidden rounded-md shadow-md"
               >
                 <Image
                   src={slide.src}
                   alt={slide.alt}
                   title={slide.alt}
                   fill
-                  className="object-contain transform transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
 
                 {/* Bottom overlay */}

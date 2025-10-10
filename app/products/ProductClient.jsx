@@ -28,7 +28,7 @@ const Page = () => {
     <div>
        {/* ===== Banner Section ===== */}
       <div
-        className="relative bg-cover bg-center h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden"
+        className="relative bg-cover bg-center h-[50vh] md:h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759831101/banner_lklwmi.webp')",
@@ -70,7 +70,7 @@ const Page = () => {
                 src={product.image[0]?.src || "/placeholder.png"}
                 alt={product.image[0]?.alt || product.name}
                 title={product.name} 
-                width={300}
+                width={400}
                 height={200}
                 className="  object-contain"
               />

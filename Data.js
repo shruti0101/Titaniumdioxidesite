@@ -3,7 +3,7 @@
 export const categories = [
   // category 1 tio2
   {
-     id: "titanium-dioxide-tiO2",
+     id: "titanium-dioxide-tio2",
   name: "Titanium Dioxide TiO₂",
   metaTitle: "Bulk Titanium Dioxide Wholesaler - Rutile & Anatase Powder ",
   metaDescription:
@@ -25,8 +25,24 @@ export const categories = [
           },
           {
             type: "p",
-            text: "Aanya Enterprises offers 25 kg powder bags of high-purity TiO₂ grade, Titanium Dioxide Kronos R2220, which is sourced from China. This product, which has a unique bluetone tint and a 98% purity level, is made to provide exceptional brightness, opacity, and durability in a range of industrial applications. Paints, plastic masterbatches, printing inks, powder coatings, laminated paper, and solvent-based coatings are just a few of the sectors that employ Kronos R2220 extensively. Because of its performance qualities, it is perfect for applications both indoors and outdoors where color constancy and durability are crucial. Highly Recommended for PVC Profile Recommended for MasterBatch",
+            text: "Aanya Enterprises offers 25 kg powder bags of high-purity TiO₂ grade, Titanium Dioxide Kronos R2220, which is sourced from China. This product, which has a unique bluetone tint and a 98% purity level, is made to provide exceptional brightness, opacity, and durability in a range of industrial applications. Paints, plastic masterbatches, printing inks, powder coatings, laminated paper, and solvent-based coatings are just a few of the sectors that employ Kronos R2220 extensively. Because of its performance qualities, it is perfect for applications both indoors and outdoors where color constancy and durability are crucial.",
+
+            
           },
+    {
+            type: "ul",
+            items: [
+              "Highly Recommended for PVC Profile(Plastic)",
+
+              "Recommended for MasterBatch(Plastic)",
+
+           
+            ],
+          },
+   
+
+
+
 
           { type: "h2", text: "Key Features – Titanium Dioxide Kronos R2220" },
           {
@@ -76,7 +92,19 @@ export const categories = [
           },
           {
             type: "p",
-            text: "Titanium Dioxide TRONOX CR826, a high-performance white pigment renowned for its remarkable brightness, durability, and fine particle distribution, is primarily supplied and traded by Aanya Enterprises. This product, which is sourced from the well-known international brand TRONOX, comes in convenient 25 kg powder bags for industrial applications. CR826 provides exceptional UV stability, opacity, and colour retention, even under harsh conditions, and is designed for use in printing inks, plastic masterbatches, powder coatings, and general-purpose coatings.Highly Recommended for Interior Architectural and  Exterior Architectural (Coatings)Recommended for industrial (Coating), Marble and Quartz (Stone",
+            text: "Titanium Dioxide TRONOX CR826, a high-performance white pigment renowned for its remarkable brightness, durability, and fine particle distribution, is primarily supplied and traded by Aanya Enterprises. This product, which is sourced from the well-known international brand TRONOX, comes in convenient 25 kg powder bags for industrial applications. CR826 provides exceptional UV stability, opacity, and colour retention, even under harsh conditions, and is designed for use in printing inks, plastic masterbatches, powder coatings, and general-purpose coatings.",
+          },
+
+
+              {
+            type: "ul",
+            items: [
+              "Highly Recommended for Interior Architectural and  Exterior Architectural (Coatings)",
+
+              "Recommended for industrial (Coating), Marble and Quartz (Stone)",
+
+           
+            ],
           },
 
           { type: "h2", text: "Key Features – Titanium Dioxide TRONOX CR826" },
@@ -799,6 +827,17 @@ export const categories = [
       text: "Titanium Dioxide Interchina DR2588, a premium white pigment known for its outstanding brightness, strong concealing ability, and superior resistance to weather, is supplied and traded by Aanya Enterprises, a reliable source. This grade, which comes in 25 kg powder bags, is perfect for applications requiring vibrant visual impact and long-term durability. Architectural paints, industrial coatings, plastic masterbatches, powder coatings, and printing inks all make extensive use of Interchina DR2588 because of its excellent whiteness, smooth dispersion, and reliable performance in a variety of settings. Highly Recommended for PVC Profile (Plastics).",
     },
 
+
+    {
+            type: "ul",
+            items: [
+              "Highly Recommended for  PVC Profile (Plastics)",
+
+           
+            ],
+          },
+
+    
     { type: "h2", text: "Key Features – Titanium Dioxide Interchina DR2588" },
     {
       type: "ul",
@@ -901,6 +940,17 @@ export const categories = [
       text: "Titanium Dioxide Jinhai CR718 is a premium white pigment with outstanding opacity, brightness, and durability that is dependable to buy from and trade with Aanya Enterprises. This grade, which comes in 25 kg powder bags, is perfect for usage in a variety of commercial and industrial settings where reliable performance and aesthetic appeal are essential. Paints, plastic masterbatches, coatings, printing inks, and powder coatings can all benefit from CR718’s UV protection, long-term stability, and ease of dispersion for both indoor and outdoor applications. Highly Recommended for Interior Architectural, Exterior Architectural and Industrial (Coatings).",
     },
 
+    {
+            type: "ul",
+            items: [
+              "Highly Recommended for Interior Architectural, Exterior Architectural and Industrial (Coatings )",
+
+
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide Jinhai CR718" },
     {
       type: "ul",
@@ -1001,6 +1051,19 @@ export const categories = [
       text: "Titanium Dioxide Jinhai R6618 is a premium-grade white pigment with outstanding whiteness, opacity, and UV resistance that is supplied and traded by Aanya Enterprises. This grade, which comes in 25 kg powder bags, is made to satisfy the performance requirements of many industrial applications. Powder coatings, automobile paints, printing inks, plastic masterbatches, and architectural and industrial coatings all make extensive use of Jinhai R6618. It is perfect for both indoor and outdoor applications due to its long-term durability, simple dispersion, and uniform colour retention.",
     },
 
+
+
+        {
+            type: "ul",
+            items: [
+              "Highly Recommended for Exterior Architectural (Coatings)",
+
+              "Recommended for Interior Architectural and industrial (Coatings), High Gloss and Reverse Lamination (ink), Marble, Quartz (stone)",
+
+           
+            ],
+          },
+
     { type: "h2", text: "Key Features – Titanium Dioxide Jinhai R6618" },
     {
       type: "ul",
@@ -1050,6 +1113,18 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Jinhai R6628 is a high-performance white pigment renowned for its exceptional opacity, UV resistance, and superb whiteness. Aanya Enterprises is a dependable provider and trader of this pigment. This grade, which comes in 25 kg powder bags, is designed for demanding applications in a variety of industries. With its long-lasting brightness, weather resistance, and effective dispersion, Jinhai R6628 is used extensively in plastic masterbatches, automobile coatings, industrial paints, powder coatings, and printing inks.",
     },
+
+
+        {
+            type: "ul",
+            items: [
+              "Highly Recommended for Masterbatch(Plastics)",
+
+            
+           
+            ],
+          },
+
 
     { type: "h2", text: "Key Features – Titanium Dioxide Jinhai R6628" },
     {
@@ -1102,6 +1177,17 @@ export const categories = [
       text: "One of the top suppliers and traders of Titanium Dioxide Jinhai R6658, a premium white pigment renowned for its exceptional whiteness, high opacity, and resilience to UV light, is Aanya Enterprises. This pigment, which comes in 25 kg powder bags, is perfect for demanding commercial and industrial applications where reliable performance is crucial. Jinhai R6658, which provides excellent brightness, stable dispersion, and long-lasting surface protection, is widely utilised in plastic masterbatches, industrial and automotive coatings, powder coatings, and printing inks.",
     },
 
+       {
+            type: "ul",
+            items: [
+              "Highly Recommended for Masterbatch(Plastics)",
+
+            
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide Jinhai R6658" },
     {
       type: "ul",
@@ -1152,6 +1238,17 @@ export const categories = [
       text: "Titanium Dioxide KMML RC808, a premium white pigment, is sold and traded by Aanya Enterprises, a reputable company. The pigment is packaged in 25 kg powder sacks. Renowned for its robust opacity, exceptional brightness, and long-lasting performance, RC808 is ideally suited for a broad range of commercial and industrial applications. This grade provides reliable UV protection, color retention, and weather resistance in both indoor and outdoor settings, making it widely utilised in ornamental paints, industrial coatings, masterbatches, printing inks, and powder coatings.",
     },
 
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for High Gloss, Reverse Lamination(Ink)",
+
+            
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide KMML RC808" },
     {
       type: "ul",
@@ -1200,6 +1297,19 @@ export const categories = [
       type: "p",
       text: "The high-performance white pigment titanium dioxide KMML RC822, which comes in 25 kg powder bags, is a reliable product of Aanya Enterprises. This grade, which is well-known for its exceptional brightness, high opacity, and long-lasting durability, is made to satisfy the exacting specifications of numerous industrial applications. With its remarkable UV stability, colour consistency, and outdoor performance, KMML RC822 is perfect for usage in paints, coatings, plastics, printing inks, masterbatches, and powder coatings.",
     },
+
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for Exterior Architectural and Industrial (Coating) ",
+
+            "Recommended for Interior Architectural (Coating), Marble and Quartz (Stone) "
+           
+            ],
+          },
+
+
 
     { type: "h2", text: "Key Features – Titanium Dioxide KMML RC822" },
     {
@@ -1400,6 +1510,18 @@ export const categories = [
       text: "High-quality white pigment Titanium Dioxide LB BLR886 is sold in 25 kg powder bags by Aanya Enterprises, a reliable supplier and trader. BLR886 is well-suited for demanding industrial applications that demand long-lasting whiteness and durability because of its brilliant bluetone shade, exceptional hiding power, and constant dispersion. This grade offers reliable color performance, weather resistance, and UV protection in both indoor and outdoor settings, making it a popular choice for paints, plastic masterbatches, printing inks, industrial coatings, and powder coatings.",
     },
 
+
+       {
+            type: "ul",
+            items: [
+              "Highly Recommended for MasterBatch (Plastic)",
+
+            " Recommended for PVC Profile (Plastic)"
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide LB BLR886" },
     {
       type: "ul",
@@ -1451,6 +1573,17 @@ export const categories = [
       text: "Titanium Dioxide LB BLR895, a premium-grade white pigment that comes in 25 kg powder sacks, is a dependable product of Aanya Enterprises. BLR895 is known for its remarkable whiteness, strong opacity, and fine particle dispersion. It is designed to meet high performance standards in a variety of industrial applications. This grade offers exceptional UV resistance, color retention, and weather resilience for both indoor and outdoor applications, and is widely used in premium paints, plastic masterbatches, automotive coatings, printing inks, and powder coatings.",
     },
 
+       {
+            type: "ul",
+            items: [
+              "Highly Recommended for Interior Architectural, Exterior Architectural and Industrial (Coatings )",
+
+            
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide LB BLR895" },
     {
       type: "ul",
@@ -1500,6 +1633,18 @@ export const categories = [
       type: "p",
       text: "High-performance white pigment Titanium Dioxide LB BLR896 is sold in 25 kg powder bags by Aanya Enterprises, a prominent supplier and trader. This grade is ideal for demanding applications in the paints and plastics industries because of its exceptional weather resistance, strong bluetone, and improved brightness. Because it provides outstanding UV protection, endurance, and long-term color stability, LB BLR896 is frequently used in printing inks, industrial coatings, plastic masterbatches, automobile paints, and powder coatings.",
     },
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for  Exterior Architectural and Industrial (Coatings) ",
+"Recommended for Interior Architectural (Coatings),  PVC Profile (Plastics)"
+            
+           
+            ],
+          },
+
+
 
     { type: "h2", text: "Key Features – Titanium Dioxide LB BLR896" },
     {
@@ -1602,6 +1747,20 @@ export const categories = [
       text: "Titanium Dioxide LB BLR996, a high-performance white pigment renowned for its exceptional opacity, vivid bluetone whiteness, and exceptional durability, is supplied and traded by Aanya Enterprises, a reliable source. This grade, which comes in 25 kg powder bags, is perfect for use in demanding applications that call for reliable performance and long-lasting effects. With its UV protection, weather resilience, and ease of dispersion for both indoor and outdoor applications, LB BLR996 is widely used in paints, coatings, plastic masterbatches, printing inks, and powder coatings.",
     },
 
+
+
+
+       {
+            type: "ul",
+            items: [
+              "Highly Recommended for  Interior Architectural, Exterior Architectural and Industrial (Coating)",
+
+            "Recommended for High Gloss and Reverse Lamination (ink), Marble and Quartz (stone)"
+           
+            ],
+          },
+
+
     { type: "h2", text: "Recommended Applications" },
     {
       type: "ul",
@@ -1662,6 +1821,18 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide LB LR108 is a high-performance white pigment with remarkable opacity, whiteness, and UV resistance that is expertly supplied and traded by Aanya Enterprises. This grade, which comes in 25 kg powder bags, is designed to function dependably in a range of commercial and industrial applications. Paints, coatings, plastic masterbatches, printing inks, and powder coatings all make extensive use of LB LR108, which provides long-term brightness, durability, and processing simplicity for both indoor and outdoor applications.",
     },
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for  Masterbatch (Plastics)",
+
+            
+           
+            ],
+          },
+
+
 
     { type: "h2", text: "Recommended Applications" },
     {
@@ -1771,6 +1942,18 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Pangang R248, a premium white pigment renowned for its exceptional opacity, stunning whiteness, and excellent weather resistance, is reliably supplied and traded by Aanya Enterprises. Specially developed for demanding applications in the paints and plastics industries, R248 is available in 25 kg powder bags. This grade, which provides UV protection, durability, and long-term color stability for both indoor and outdoor conditions, is commonly used in printing inks, industrial coatings, powder coatings, ornamental paints, and plastic masterbatches.",
     },
+
+
+       {
+            type: "ul",
+            items: [
+              "Highly Recommended for Masterbatch(Plastics)",
+
+            
+           
+            ],
+          },
+
 
     { type: "h2", text: "Key Features – Titanium Dioxide Pangang R248" },
     {
@@ -1984,6 +2167,20 @@ export const categories = [
       type: "p",
       text: "Highly Recommended for Interior Architectural, Exterior Architectural and Industrial (Coating). Recommended for High Gloss and Reverse Lamination (ink), Marble and Quartz (stone).",
     },
+
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for  Interior Architectural, Exterior Architectural and Industrial (Coating)",
+
+            "Recommended for High Gloss and Reverse Lamination (ink), Marble and Quartz (stone)"
+           
+            ],
+          },
+
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide Pangang R298" },
     {
       type: "ul",
@@ -2037,6 +2234,20 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide THR218 is available from the well-known Taihai Group through Aanya Enterprises, a top supplier and trader. For high-performance applications where exceptional brightness, weather resistance, and dispersion are essential, this premium-grade white pigment was created especially. With its high gloss, exceptional tinting strength, and durability, THR218 is a titanium dioxide sulfate-process surface treatment with zirconium and alumina that is perfect for a variety of industrial applications.",
     },
+
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for  Exterior Architectural (Coating)",
+
+            "Recommended for Interior Architectural and Industrial (Coating), Reverse Lamination(ink), Marble and Quartz(stone)"
+           
+            ],
+          },
+
+
+
     {
       type: "p",
       text: "Highly Recommended for Exterior Architectural (Coating). Recommended for Interior Architectural and Industrial (Coating), Reverse Lamination (ink), Marble and Quartz (stone).",
@@ -2197,6 +2408,19 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TI-Pure R-103, a high-performance white pigment developed by DuPont (USA) and supplied in 25 kg powder bags, is reliably offered by Aanya Enterprises. With outstanding brightness, tinting strength, and dispersion qualities, as well as exceptional UV resistance, this grade is specifically designed for plastic applications. TI-Pure R-103 provides high opacity and durability even under extreme environmental conditions, making it ideal for PVC products, engineering plastics, films, polyolefins, and other plastic processing applications.",
     },
+
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for PVC Profile & MasterBatch (Plastic)",
+
+            
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TI-Pure R103" },
     {
       type: "ul",
@@ -2248,6 +2472,18 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TI-Pure R-104 is a premium-grade white pigment created by DuPont (USA) and supplied in 25 kg powder bags by Aanya Enterprises, a trusted source and trader. Known for its high opacity, bluetone brightness, and superior dispersion, this grade is ideal for plastic applications, high-performance paints, and powder coatings where consistent quality and weather durability are essential. TI-Pure R-104 is perfect for UV-exposed plastic items, industrial paints, and exterior/interior coatings, offering exceptional coverage and long-lasting performance.",
     },
+
+   {
+            type: "ul",
+            items: [
+              "Highly Recommended for Masterbatch(Plastics)",
+
+            "Recommended for PVC Profile (Plastic)"
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TI-Pure R-104" },
     {
       type: "ul",
@@ -2299,6 +2535,19 @@ export const categories = [
       type: "p",
       text: "Aanya Enterprises, a reliable supplier and trader, offers TI-Pure R105 Titanium Dioxide, a high-performance grade from Chemours (formerly DuPont). Specifically engineered for plastics, it delivers excellent durability, brightness, and UV resistance in outdoor and high-exposure applications. TI-Pure R105 is perfect for PVC profiles, masterbatches, films, injection molding, exterior parts, automotive components, and other weather-resistant plastic applications.",
     },
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for Masterbatch(Plastics)",
+
+            "Recommended for PVC Profile (Plastic)"
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – TI-Pure R105" },
     {
       type: "ul",
@@ -2401,6 +2650,18 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TI-Pure R900 is a premium-grade white pigment created by DuPont (USA) and available in 25 kg powder bags from Aanya Enterprises, a trustworthy supplier and trader. TI-Pure R900 is well-known for its high opacity, bluetone brightness, and superior dispersion. It is ideal for plastic applications, high-performance paints, and powder coatings where weather durability and consistent quality are crucial. This grade is perfect for UV-exposed plastic items, industrial paints, and exterior and interior coatings, offering exceptional coverage and durability.",
     },
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for PVC Profile & MasterBatch ",
+
+           
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TI-Pure R900" },
     {
       type: "ul",
@@ -2453,6 +2714,19 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TI-Pure R902 is a premium-grade white pigment created by DuPont (USA) and available in 25 kg powder bags from Aanya Enterprises, a trustworthy supplier and trader. TI-Pure R902 is well-known for its high opacity, bluetone brightness, and superior dispersion. It is ideal for plastic applications, high-performance paints, and powder coatings where weather durability and consistent quality are crucial. This grade is perfect for UV-exposed plastic items, industrial paints, and exterior and interior coatings, offering exceptional coverage and durability.",
     },
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for PVC Profile & MasterBatch ",
+
+           
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TI-Pure R902" },
     {
       type: "ul",
@@ -2505,6 +2779,19 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Tikon TR33, a high-performance white pigment renowned for its stunning whiteness, superior dispersion, and strong hiding power, is supplied and traded by Aanya Enterprises, a reputable company. This grade comes in 25 kg powder bags and is ideal for a range of commercial and industrial applications. Tikon TR33 provides uniform color, UV protection, and long-lasting effects across various systems, making it popular for decorative paints, industrial coatings, plastic masterbatches, printing inks, and powder coatings.",
     },
+
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for Interior Architectural and Exterior Architectural (Coating) ",
+
+           "Recommended for High Gloss and Reverse Lamination (ink), Marble and Quartz (stone)"
+           
+            ],
+          },
+
     { type: "h2", text: "Key Features – Titanium Dioxide Tikon TR33" },
     {
       type: "ul",
@@ -2557,6 +2844,19 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Tikon TR36 is a premium white pigment designed for superior whiteness, UV resistance, and powerful covering power. Aanya Enterprises is a reliable provider and trader of this pigment. This TiO₂ grade comes in 25 kg powder bags and can be used for a variety of industrial applications that call for long-term durability and aesthetic brilliance. Tikon TR36 offers dependable dispersion and improved brightness in architectural paints, plastic masterbatches, printing inks, industrial coatings, and powder coatings.",
     },
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for MasterBatch (Plastic) ",
+
+           
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide Tikon TR36" },
     {
       type: "ul",
@@ -2609,6 +2909,20 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TRONOX CR-595, a premium white pigment produced by TRONOX and available in 25 kg powder sacks, is a dependable product of Aanya Enterprises. This grade is appropriate for a variety of industrial applications because of its exceptional brightness, high opacity, and dispersion. With its exceptional UV resistance, weathering qualities, and long-lasting durability, CR-595 is perfect for use in paints, coatings, plastic masterbatches, printing inks, and powder coatings.",
     },
+
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for Marble and Quartz (Stone) ",
+
+           
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TRONOX CR-595" },
     {
       type: "ul",
@@ -2660,6 +2974,19 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide TRONOX CR-828 is a premium white pigment produced by TRONOX and available in 25 kg powder bags. Aanya Enterprise is a reliable provider and trader of this product. CR-828 is well-known for its outstanding brightness, high opacity, and superior dispersion qualities. It is made for demanding applications in a variety of sectors. This grade offers excellent UV stability, weather resistance, and colour constancy for both indoor and outdoor applications, making it perfect for use in paints, coatings, plastic masterbatches, printing inks, and powder coatings.",
     },
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for Exterior Architectural & Industrial (Coating), Marble and Quartz(Stone) ",
+
+           "Recommended for Interior Architectural (Coating)"
+           
+            ],
+          },
+
+
     { type: "h2", text: "Key Features – Titanium Dioxide TRONOX CR-828" },
     {
       type: "ul",
@@ -3176,6 +3503,17 @@ export const categories = [
       type: "p",
       text: "Aanya Enterprises offers 25 kg powder bags of high-purity TiO₂ grade, Titanium Dioxide Kronos R2220, sourced from China. This product features a unique bluetone tint and a 98% purity level, providing exceptional brightness, opacity, and durability across a wide range of industrial applications. It is extensively used in paints, plastic masterbatches, printing inks, powder coatings, laminated papers, and solvent-based coatings. Kronos R2220 is suitable for both indoor and outdoor applications where color consistency and long-lasting performance are crucial.",
     },
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for PVC Profile",
+
+           "Recommended for MasterBatch"
+           
+            ],
+          },
+
     { type: "h2", text: "Key Features – Titanium Dioxide Kronos R2220" },
     {
       type: "ul",
@@ -3225,6 +3563,17 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Kronos R2310 is a 98% pure high-performance white pigment, available from Aanya Enterprises in 25 kg powder bags and sourced from Germany. Known for its bluetone hue, this grade offers excellent brightness, opacity, and dispersion qualities, making it suitable for a wide range of industrial applications. Kronos R2310 provides long-lasting colour stability, easy processing, and reliable performance in both indoor and outdoor applications, and is extensively used in coatings, masterbatches, printing inks, powder coatings, laminated papers, and solvent-based systems.",
     },
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for Interior Architectural and Industrial (Coating), Marble and Quartz (Stone) ",
+
+           "Recommended for Exterior Architectural (Coating)"
+           
+            ],
+          },
+
     {
       type: "h2",
       text: "Key Features – Titanium Dioxide Kronos R2310",
@@ -3327,6 +3676,20 @@ export const categories = [
       type: "p",
       text: "Titanium Dioxide Kronos R2450 is a premium pigment-grade TiO₂ with 98% purity, sourced from Germany and supplied in 25 kg powder bags by Aanya Enterprises. Known for its high brightness, bluetone shade, excellent opacity, and reliable processing performance, this grade is suitable for a variety of industrial applications. It ensures consistent color quality, UV resistance, and long-term durability in both indoor and outdoor settings, making it ideal for paints, plastic masterbatches, printing inks, powder coatings, and laminated papers.",
     },
+
+
+
+ {
+            type: "ul",
+            items: [
+              "Highly Recommended for MasterBatch (Plastic) ",
+
+           "Recommended for PVC Profile (Plastic)"
+           
+            ],
+          },
+
+
     {
       type: "h2",
       text: "Key Features – Titanium Dioxide Kronos R2450",

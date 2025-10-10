@@ -28,7 +28,7 @@ const Footer = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer
-      className="relative text-gray-300 pt-16 pb-8 bg-cover bg-center"
+      className=" relative text-gray-300 pt-16 pb-8 bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.6)), url(https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759726382/bg-footer_wntkmm.webp)`,
       }}
@@ -120,27 +120,19 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-[#F7C600]" />
-                <span className="text-white">sales@aanyaenterprise.com</span>
+              <a href="mailto:sales@aanyaenterprise.com">sales@aanyaenterprise.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-[#F7C600]" />
-                <span className="text-white">info@aanyaenterprise.com</span>
+                <a href="mailto:info@aanyaenterprise.com">info@aanyaenterprise.com</a>
               </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-5 mt-6">
-              {[Facebook, Instagram, Youtube, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" target="_blank" className="hover:scale-110 transition-transform">
-                  <Icon className="w-6 h-6 hover:text-[#F7C600] transition-colors" />
-                </a>
-              ))}
-            </div>
           </div>
 
 
   {/* Trust Elite Section */}
-        <div className="px-6  items-center md:pb-8">
+        <div className="px-2  items-center md:pb-8">
           <div>
             <h3 className="text-xl font-serif text-white font-semibold  mb-3">
               Trust Elite Certificate
@@ -168,7 +160,7 @@ const Footer = () => {
                     ✕
                   </button>
                   <img
-                    src="/cert.webp"
+                    src="https://res.cloudinary.com/dzbkxqqo9/image/upload/v1760078054/WhatsApp_1_liz2am.webp"
                     alt="Trust Elite Full"
                     className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
                   />
@@ -183,7 +175,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative border-t border-gray-600 mt-12 pt-4 text-center text-sm md:text-base text-gray-300">
+      <div className="relative border-t px-2 border-gray-600 mt-12 pt-4 text-center text-sm md:text-base text-gray-300">
         <p>Copyright © 2025 Aanya Enterprises. All Rights Reserved.</p>
         <p className="mt-1">
        Website Designed  By Promozione Branding Pvt. Ltd.

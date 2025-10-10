@@ -31,7 +31,29 @@ const services = [
       link:"/products/caustic-soda-flakes"
   },
 
-  // { title: "Green Optical Brighter", subtitle: "Infrastructure Reliability", image: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759751316/67_pw25m7.webp" },
+   {
+    title: "Carbon Black Printex",
+    image:
+      "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819273/73_utpvky.webp",
+      link:"/products/carbon-black-printex-35"
+  },
+
+   {
+    title: "Optical Brightener",
+    image:
+      "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819254/68_dk2dkc.webp",
+      link:"/products/optical-brightener-masterbatch"
+  },
+
+  { title: "Calcium Carbonate", image: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819276/76_uskxxg.webp",
+       link:"/products/calcium-carbonate-bp"
+   },
+  
+
+  { title: "Titanium Dioxide-TRONOX CR826",  image: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819240/50_qt0w5q.webp",
+       link:"/products/titanium-dioxide-tiO2-tronox-cr826"
+   },
+
 ];
 
 export default function ServicesGrid() {
@@ -50,7 +72,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2  lg:grid-cols-4 gap-4">
           {services.map((service, index) => (
             <div
               key={index}
@@ -63,7 +85,7 @@ export default function ServicesGrid() {
                 src={service.image}
                 alt={service.title}
                 title={service.title}
-                className={`w-full h-80 object-cover transition-all duration-500
+                className={`w-full  object-contain transition-all duration-500
                 ${activeCard === index ? "scale-105" : "group-hover:scale-105 "}`}
               />
               </Link>
@@ -71,14 +93,14 @@ export default function ServicesGrid() {
              
 
               {/* Content */}
-              <div className="absolute bottom-3 left-3 text-black">
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                <p className="text-sm">{service.subtitle}</p>
+              <div className="text-center p-2 md:absolute bottom-3 left-0 text-black">
+                <h3 className="mx-auto md:text-xl font-semibold ">{service.title}</h3>
+            
               </div>
 
               {/* Arrow */}
               {activeCard !== index && (
-                <div className="absolute top-3 right-3 bg-[#F8CC19] p-2 rounded-full transition-opacity group-hover:opacity-100 opacity-90">
+                <div className="absolute top-3 right-3 bg-[#F8CC19] p-2 md:p-4 rounded-full transition-opacity group-hover:opacity-100 opacity-90">
                   <ArrowUpRight className="w-4 h-4 text-white" />
                 </div>
               )}

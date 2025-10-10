@@ -80,24 +80,22 @@ export default function AboutUs() {
           </p>
 
           <p className="text-lg text-black leading-relaxed mb-4">
-            We understand that Titanium Dioxide plays a vital role in enhancing the 
-            <strong>brightness, opacity, and durability</strong>of finished products. That’s why we focus on providing manufacturers in 
-            <strong>
-             paints, plastics, paper, rubber, cosmetics, and printing inks 
-            </strong>
+            We understand that Titanium Dioxide plays a vital role in enhancing the  
+            <strong> brightness, opacity, and durability</strong>of finished products. That’s why we focus on providing manufacturers in  
+             <strong>  paints, plastics, paper, rubber, cosmetics, and printing inks   </strong>
           with premium-grade materials that meet global standards.
           </p>
 
           <p className="text-lg text-black leading-relaxed mb-6">
            At <strong>Aanya Enterprise</strong>{" "}
            , we are committed to long-term business relationships built on trust, integrity, and customer satisfaction. Whether you are a small manufacturer or a large-scale industry, we are here to be your reliable 
-            <strong>Titanium Dioxide wholesaler.</strong>
+            <strong> Titanium Dioxide wholesaler.</strong>
           </p>
 
           {/* Actions */}
           <div className="flex flex-nowrap items-center gap-3">
             {/* Button */}
-            <Link href="/about"
+            <Link href="/about-us"
               className="relative px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold
       bg-[#00537B] text-white rounded-md
       transition-all duration-700

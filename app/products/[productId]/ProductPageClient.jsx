@@ -26,7 +26,7 @@ export default function ProductPage({ params }) {
       {/* Hero Banner */}
       <section className="relative w-full h-[50vh] md:h-[80vh] bg-cover bg-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759831101/banner_lklwmi.webp')" }}>
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="bg-white font-serif text-[#B57E1F] text-2xl md:text-5xl p-2 rounded font-bold">{product.name}</h1>
+          <h1 className="px-3 bg-white font-serif text-[#B57E1F] text-xl md:text-5xl p-2 rounded font-bold">{product.name}</h1>
         </div>
       </section>
 
@@ -117,31 +117,150 @@ export default function ProductPage({ params }) {
   </div>
 
   {/* Enquiry Form Card */}
-  <div className="lg:w-1/3 bg-[#00537B]/20 rounded-xl shadow-lg p-6 md:p-8 flex flex-col">
-    <h2 className="text-2xl md:text-3xl  font-semibold text-[#00537B] mb-6 border-b pb-2 text-center">Enquiry Form</h2>
-    
-    {/* Fixed height + scrollable form */}
-    <form className="space-y-6 overflow-y-auto mt-4 flex-1 max-h-[600px]">
-      <input type="text" placeholder="Your Name" className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white " />
-       
-      <input type="email" placeholder="Your Email" className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white " />
+  {/* Enquiry Form Card */}
+<div className="lg:w-1/3 bg-[#00537B]/20 rounded-xl shadow-lg p-6 md:p-8 flex flex-col">
+  <h2 className="text-2xl md:text-3xl font-semibold text-[#00537B] mb-6 border-b pb-2 text-center">Enquiry Form</h2>
 
-      <input type="tel" placeholder="Mobile Number" className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white " />
+  <form
+    onSubmit={async (e) => {
+      e.preventDefault(); 
+      const form = e.target;
+      const formData = new FormData(form);
 
-      <select className="w-full p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white" defaultValue="">
-        <option value="" disabled>Select Product</option>
-        <option value="Titanium Dioxide (TiO₂)">Titanium Dioxide (TiO₂)</option>
-        <option value="Titanium Dioxide Rutile">Titanium Dioxide Rutile</option>
-        <option value="Lithopone">Lithopone</option>
-        <option value="Optical Brighter">Optical Brighter</option>
-        <option value="Caustic Soda">Caustic Soda</option>
-        <option value="Calcium Carbonate">Calcium Carbonate</option>
-      </select>
-      <textarea placeholder="Your Message" rows={4} className="w-full p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white placeholder-black" />
-      <button type="submit" className="w-full mt-4 py-3 bg-[#00537B] text-white rounded-lg font-semibold hover:bg-[#004061] transition cursor-pointer">Submit Enquiry</button>
-    </form>
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/sales@aanyaenterprise.com", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          alert("✅ Your enquiry has been submitted successfully!");
+          form.reset();
+        } else {
+          alert("❌ Submission failed. Please try again.");
+        }
+      } catch (error) {
+        alert("❌ An error occurred. Please try again.");
+        console.error(error);
+      }
+    }}
+    className="space-y-6 overflow-y-auto mt-4 flex-1 max-h-[600px]"
+  >
+    {/* FormSubmit hidden fields */}
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_cc" value="inquiry@promozionebranding.com" />
+    <input type="hidden" name="_subject" value={`New Product Enquiry: ${product.name}`} />
+    <input type="hidden" name="_nosponsor" value="true" />
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white"
+      required
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white"
+      required
+    />
+
+    <input
+      type="tel"
+      name="phone"
+      maxLength={10}
+      placeholder="Mobile Number"
+      className="w-full placeholder-black p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white"
+      required
+    />
+
+    <select
+      name="product"
+      className="w-full p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white"
+      defaultValue=""
+      required
+    >
+      <option value="" disabled>
+        Select Product
+      </option>
+      <option value="Titanium Dioxide (TiO₂)">Titanium Dioxide (TiO₂)</option>
+      <option value="Titanium Dioxide Rutile">Titanium Dioxide Rutile</option>
+      <option value="Lithopone">Lithopone</option>
+      <option value="Optical Brighter">Optical Brighter</option>
+      <option value="Caustic Soda">Caustic Soda</option>
+      <option value="Calcium Carbonate">Calcium Carbonate</option>
+    </select>
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      rows={4}
+      className="w-full p-3 border-2 border-black rounded-lg focus:outline-none focus:border-white placeholder-black"
+      required
+    />
+
+    <button
+      type="submit"
+      className="w-full mt-4 py-3 bg-[#00537B] text-white rounded-lg font-semibold hover:bg-[#004061] transition cursor-pointer"
+    >
+      Submit Enquiry
+    </button>
+  </form>
+</div>
+</div>
+
+{/* Related Products Section */}
+<div className="mt-20">
+  <h2 className="text-3xl text-start md:text-5xl font-semibold text-[#B57E1F] mb-10 text-center font-serif border-b w-full pb-2 inline-block">
+    Related Products
+  </h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+    {(() => {
+      // Find the category object for the current product
+      const categoryObj = categories.find((c) =>
+        c.products.some((p) => p.id === product.id)
+      );
+
+      // Get related products from the same category, excluding current product
+      const related = categoryObj
+        ? categoryObj.products.filter((p) => p.id !== product.id)
+        : [];
+
+      return related.slice(0, 4).map((relatedProduct) => (
+        <div
+          key={relatedProduct.id}
+          className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all p-4 text-center group"
+        >
+          <div className="w-full h-52 relative overflow-hidden rounded-lg">
+            <Image
+              src={relatedProduct.image[0]?.src}
+              alt={relatedProduct.name}
+              fill
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <h3 className="mt-4 text-lg font-semibold text-[#00537B]">{relatedProduct.name}</h3>
+          <p className="text-sm text-gray-500 mt-1">{relatedProduct.model}</p>
+          <a
+            href={`/products/${relatedProduct.id}`}
+            className="mt-4 inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-600 to-yellow-600 text-white rounded-lg font-medium hover:from-yellow-300 to-yellow-600 transition-all"
+          >
+            View Details <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
+      ));
+    })()}
   </div>
 </div>
+
+
+
+
+
 
   {/* Pass isOpen + onClose to ContactForm */}
               {isFormOpen && (

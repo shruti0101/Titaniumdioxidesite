@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 2000);
@@ -15,21 +16,36 @@ export default function ContactForm() {
 
   const handleClose = () => setIsOpen(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setIsOpen(false);
-    }, 10000);
+const handleSubmit = async (e) => {
+  e.preventDefault(); // prevent page reload
+  const form = e.target;
+  const data = new FormData(form);
 
-    const form = e.target;
-    const data = new FormData(form);
-    fetch("https://formsubmit.co/sales@aanyaenterprise.com", {
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/sales@aanyaenterprise.com", {
       method: "POST",
       body: data,
-    }).catch(console.error);
-  };
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+      setSuccessMessage("✅ Your enquiry has been submitted successfully!");
+      form.reset();
+      setTimeout(() => {
+        setSubmitted(false);
+        setIsOpen(false);
+      }, 8000);
+    } else {
+      setSuccessMessage("❌ Submission failed. Please try again.");
+    }
+  } catch (error) {
+    console.error(error);
+    setSuccessMessage("❌ An error occurred. Please try again.");
+  }
+};
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 backdrop-blur-sm p-4">
@@ -60,18 +76,13 @@ export default function ContactForm() {
           </h2>
           <div className="w-20 h-[3px] bg-[#F7C600] mx-auto mb-6 rounded-full"></div>
 
-          {submitted && (
-            <div className="bg-green-500 text-white p-4 rounded mb-4 text-center font-semibold shadow-md">
-              Thank you! Your message has been sent.
-            </div>
-          )}
-
-          {!submitted && (
+          {!submitted ? (
             <form className="space-y-4" onSubmit={handleSubmit}>
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="New Product Enquiry" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_nosponsor" value="false" />
+              <input type="hidden" name="_nosponsor" value="true" />
+              <input type="hidden" name="_cc" value="inquiry@promozionebranding.com" />
               <input type="hidden" name="product" value="Enquiry From Website" />
 
               {/* Name & Product select */}
@@ -84,11 +95,11 @@ export default function ContactForm() {
                   required
                 />
                 <select
-                  name="machine"
+                  name="products"
                   className="flex-1 p-3 rounded-lg text-black text-sm border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:outline-none bg-white/90 shadow-sm transition"
                   required
                 >
-                  <option value="" disabled>
+                  <option value="">
                     Select Product
                   </option>
                   <option value="Titanium Dioxide (TiO₂)">Titanium Dioxide (TiO₂)</option>
@@ -132,6 +143,8 @@ export default function ContactForm() {
                 Send Message
               </button>
             </form>
+          ) : (
+            <p className="text-center text-green-600 font-semibold text-lg">{successMessage}</p>
           )}
         </div>
       </div>
