@@ -4,20 +4,39 @@ import { categories } from "@/Data";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 
-// Function to fetch all blogs from Sanity
+// Fetch all blogs from Sanity
 async function getAllBlogs() {
   const query = groq`*[_type=="blog"]{slug, date}`;
   return client.fetch(query);
 }
 
 export async function GET() {
-  const baseUrl = "https://titaniumdioxidewholesaler.com/"; 
+  const baseUrl = "https://titaniumdioxidewholesaler.com";
 
   // Flatten all products
   const allProducts = categories.flatMap((c) => c.products);
 
   // Fetch blogs
   const blogs = await getAllBlogs();
+
+  // Static pages (About, Contact, Blog Listing)
+  const staticPages = [
+    { loc: `${baseUrl}/about-us`, priority: 0.8, changefreq: "yearly" },
+    { loc: `${baseUrl}/contact-us`, priority: 0.8, changefreq: "yearly" },
+    { loc: `${baseUrl}/products`, priority: 0.8, changefreq: "yearly" },
+    { loc: `${baseUrl}/blogs`, priority: 0.9, changefreq: "weekly" },
+  ]
+    .map(
+      (page) => `
+      <url>
+        <loc>${page.loc}</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>${page.changefreq}</changefreq>
+        <priority>${page.priority}</priority>
+      </url>
+    `
+    )
+    .join("");
 
   // Homepage
   const homepage = `
@@ -57,7 +76,7 @@ export async function GET() {
     )
     .join("");
 
-  // Blogs
+  // Blogs (Individual Posts)
   const blogUrls = blogs
     .map(
       (blog) => `
@@ -73,9 +92,11 @@ export async function GET() {
     )
     .join("");
 
+  // Combine all
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${homepage}
+    ${staticPages}
     ${categoryUrls}
     ${productUrls}
     ${blogUrls}
