@@ -87,17 +87,17 @@ export default function Navbar() {
             >
               <MapPin size={14} /> <span>Delhi</span>
             </a>
-            <a
+            {/* <a
               href="mailto:sales@aanyaenterprise.com"
               className="flex items-center gap-1 text-xs"
             >
               <Mail size={14} /> <span>Email</span>
-            </a>
+            </a> */}
             <a
               href="tel:+918527557778"
-              className="flex items-center gap-1 text-xs"
+              className="flex font-serif items-center gap-1 text-xs"
             >
-              <Phone size={14} /> <span>Call</span>
+              <Phone size={14} /> <span>+918527557778</span>
             </a>
           </div>
         </div>
@@ -201,84 +201,101 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Side Drawer */}
-      {mobileNavOpen && (
-        <div className="fixed inset-0 z-50">
-          {/* Overlay */}
-          <div
-            className="absolute inset-0 bg-black/60"
-            onClick={() => setMobileNavOpen(false)}
-          />
+ {/* Mobile Side Drawer */}
+{mobileNavOpen && (
+  <div className="fixed inset-0 z-50">
+    {/* Overlay */}
+    <div
+      className="absolute inset-0 bg-black/60"
+      onClick={() => setMobileNavOpen(false)}
+    />
 
-          {/* Drawer */}
-          <div className="absolute left-0 top-0 h-full w-3/4 max-w-xs bg-black text-white shadow-lg transform transition-transform duration-300 ease-in-out translate-x-0">
-            <div className="flex justify-between items-center px-4 py-4 border-b border-white/20">
-              <Image src="/logo.webp" alt="Logo" width={90} height={45} />
-              <button onClick={() => setMobileNavOpen(false)}>
-                <X size={26} />
-              </button>
-            </div>
+    {/* Drawer */}
+    <div className="absolute left-0 top-0 h-full w-3/4 max-w-xs bg-black text-white shadow-lg transform transition-transform duration-300 ease-in-out translate-x-0">
+      <div className="flex justify-between items-center px-4 py-4 border-b border-white/20">
+        <Image src="/logo.webp" alt="Logo" width={90} height={45} />
+        <button onClick={() => setMobileNavOpen(false)}>
+          <X size={26} />
+        </button>
+      </div>
 
-            <div className="px-4 py-6 space-y-4">
-              {menuItems.map((item, idx) => (
-                <div key={idx}>
-                  {item.dropdown ? (
-                    <>
-                      <button
-                        className="flex justify-between w-full py-2 text-lg font-medium"
-                        onClick={() =>
-                          openMenu === item.label
-                            ? setOpenMenu(null)
-                            : setOpenMenu(item.label)
-                        }
+      <div className="px-4 py-6 space-y-4">
+        {menuItems.map((item, idx) => (
+          <div key={idx}>
+            {item.dropdown ? (
+              <>
+                <button
+                  className="flex justify-between w-full py-2 text-lg font-medium"
+                  onClick={() =>
+                    openMenu === item.label
+                      ? setOpenMenu(null)
+                      : setOpenMenu(item.label)
+                  }
+                >
+                  {item.label}
+                  <ChevronDown size={16} />
+                </button>
+
+                {openMenu === item.label && (
+                  <div className="pl-4 space-y-2">
+                    {item.dropdown.map((d, i) => (
+                      <Link
+                        key={i}
+                        href={`/categories/${d
+                          .replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                        className="block py-1 text-sm hover:text-yellow-400"
+                        onClick={() => {
+                          setMobileNavOpen(false);
+                          setOpenMenu(null);
+                        }}
                       >
-                        {item.label}
-                        <ChevronDown size={16} />
-                      </button>
-                      {openMenu === item.label && (
-                        <div className="pl-4 space-y-2">
-                          {item.dropdown.map((d, i) => (
-                            <Link
-                              key={i}
-                              href={`/categories/${d
-                                .replace(/\s+/g, "-")
-                                .toLowerCase()}`}
-                              className="block py-1 text-sm hover:text-yellow-400"
-                            >
-                              {d}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link
-                      href={item.link}
-                      className="block py-2 text-lg font-medium"
-                      onClick={() => setMobileNavOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
-
-              <div className="pt-6 space-y-3">
-                <button onClick={() => setIsFormOpen(true)}  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
-                  Request a Quote
-                </button>
-                
-                <Link    onClick={() => setMobileNavOpen(false)} href="/contact-us">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
-                  Contact Us
-                </button>
-                </Link>
-
-              </div>
-            </div>
+                        {d}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link
+                href={item.link}
+                className="block py-2 text-lg font-medium"
+                onClick={() => {
+                  setMobileNavOpen(false);
+                  setOpenMenu(null);
+                }}
+              >
+                {item.label}
+              </Link>
+            )}
           </div>
+        ))}
+
+        <div className="pt-6 space-y-3">
+          <button
+            onClick={() => {
+              setIsFormOpen(true);
+              setMobileNavOpen(false);
+            }}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded"
+          >
+            Request a Quote
+          </button>
+
+          <Link
+            href="/contact-us"
+            onClick={() => setMobileNavOpen(false)}
+          >
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+              Contact Us
+            </button>
+          </Link>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
 
 
     </header>

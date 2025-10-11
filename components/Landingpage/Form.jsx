@@ -51,9 +51,10 @@ const EnquiryForm = () => {
               <input type="hidden" name="_subject" value="New Product Enquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_nosponsor" value="false" />
+                  <input type="hidden" name="_cc" value="inquiry.promozione@gmail.com" />
 
               {/* Row 1 */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <select
                   className="p-3 rounded-md w-full bg-white/95 text-gray-800 outline-none border border-gray-300 focus:ring-2 focus:ring-[#F7C600]"
                   defaultValue=""
@@ -88,11 +89,13 @@ const EnquiryForm = () => {
               </div>
 
               {/* Row 2 */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center border border-gray-300 rounded-md bg-white/95 focus-within:ring-2 focus-within:ring-[#F7C600]">
                   <span className="px-2">🇮🇳</span>
                   <input
                     type="tel"
+                    maxLength={10}
+                    minLength={10}
                     placeholder="081234 56789"
                     className="p-3 flex-1 rounded-md outline-none bg-transparent"
                   />

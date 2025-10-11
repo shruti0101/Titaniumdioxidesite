@@ -56,7 +56,7 @@ const Page = () => {
 
 
       <div className="max-w-7xl  px-10 py-10 mx-auto">
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className=" grid grid-cols-2 md:grid-cols-4 gap-8">
           {currentProducts.map((product) => (
             <Link
               key={product.id}
@@ -77,7 +77,7 @@ const Page = () => {
               <div className="p-3">
 
                 
-                <h2 className="text-lg font-semibold">{product.name}</h2>
+                <h2 className="md:text-lg font-semibold">{product.name}</h2>
                
               </div>
 

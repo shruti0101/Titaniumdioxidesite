@@ -160,7 +160,7 @@ export default function ProductCategorySection() {
                   alt={slide.alt}
                   title={slide.alt}
                   fill
-                  className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain  md:object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
 
                 {/* Bottom overlay */}

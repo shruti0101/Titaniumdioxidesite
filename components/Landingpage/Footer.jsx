@@ -175,7 +175,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative border-t px-2 border-gray-600 mt-12 pt-4 text-center text-sm md:text-base text-gray-300">
+      <div className="relative border-t px-2 border-gray-600 md:mt-12 pt-4 text-center text-sm md:text-base text-gray-300">
         <p>Copyright © 2025 Aanya Enterprises. All Rights Reserved.</p>
         <p className="mt-1">
        Website Designed  By Promozione Branding Pvt. Ltd.

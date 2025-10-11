@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Script from "next/script";
+import Whatsapp from "@/components/Whatsapp";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -29,6 +30,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${outfit.variable} antialiased`}>
+
+        <Whatsapp></Whatsapp>
         <main>
           <LayoutWrapper>{children}</LayoutWrapper>
         </main>

@@ -62,7 +62,7 @@ export default function ContactForm({ isOpen, onClose }) {
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="New Product Enquiry" />
               <input type="hidden" name="_nosponsor" value="true" />
-              <input type="hidden" name="_cc" value="inquiry@promozionebranding.com" />
+                <input type="hidden" name="_cc" value="inquiry.promozione@gmail.com" />
               <input type="hidden" name="product" value="Enquiry From Website" />
 
               <div className="flex flex-col md:flex-row gap-3">
@@ -75,7 +75,7 @@ export default function ContactForm({ isOpen, onClose }) {
                 />
 
                 <select
-                  name="machine"
+                  name="products"
                   className="flex-1 p-3 rounded-md text-black text-md border-2 border-[#F7C600] bg-white/90 focus:outline-none focus:ring-2 focus:ring-[#F7C600] transition appearance-none"
                   defaultValue=""
                   required
@@ -96,6 +96,7 @@ export default function ContactForm({ isOpen, onClose }) {
                 type="tel"
                 name="phone"
                 maxLength={10}
+                minLength={10}
                 placeholder="081234 56789"
                 className="w-full p-3 rounded-md text-black text-lg border-2 border-[#F7C600] focus:outline-none bg-white/90"
                 required

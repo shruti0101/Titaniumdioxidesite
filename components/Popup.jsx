@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
               <input type="hidden" name="_subject" value="New Product Enquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_nosponsor" value="true" />
-              <input type="hidden" name="_cc" value="inquiry@promozionebranding.com" />
+              <input type="hidden" name="_cc" value="inquiry.promozione@gmail.com" />
               <input type="hidden" name="product" value="Enquiry From Website" />
 
               {/* Name & Product select */}
@@ -116,6 +116,7 @@ const handleSubmit = async (e) => {
                 type="tel"
                 name="phone"
                 maxLength={10}
+                minLength={10}
                 placeholder="081234 56789"
                 className="w-full p-3 rounded-lg text-black text-sm border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:outline-none bg-white/90 shadow-sm transition"
                 required
