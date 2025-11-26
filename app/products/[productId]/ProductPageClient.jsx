@@ -5,12 +5,19 @@ import Image from "next/image";
 import Head from "next/head";
 import Enquiry from "@/components/Enquiry";
 import { ArrowUpRight } from "lucide-react";
+
+import axios from "axios";
+
 export default function ProductPage({ params }) {
   const { productId } = React.use(params);
   const allProducts = categories.flatMap((c) => c.products);
   const product = allProducts.find((p) => p.id === productId);
   const [activeImage, setActiveImage] = useState(product?.image[0]);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+const [successMessage, setSuccessMessage] = useState("");
+const [loading, setLoading] = useState(false);
+
 
   if (!product) {
     return (
@@ -161,34 +168,75 @@ export default function ProductPage({ params }) {
               Enquiry Form
             </h2>
 
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const form = e.target;
-                const formData = new FormData(form);
+           <form
+    onSubmit={async (e) => {
+      e.preventDefault();
+      const form = e.target;
 
-                try {
-                  const response = await fetch(
-                    "https://formsubmit.co/ajax/sales@aanyaenterprise.com",
-                    {
-                      method: "POST",
-                      body: formData,
-                    }
-                  );
+      const name = form.name.value;
+      const phone = form.phone.value;
+      const email = form.email.value;
+      const product = form.product.value;
+      const message = form.message.value;
 
-                  if (response.ok) {
-                    alert("✅ Your enquiry has been submitted successfully!");
-                    form.reset();
-                  } else {
-                    alert("❌ Submission failed. Please try again.");
-                  }
-                } catch (error) {
-                  alert("❌ An error occurred. Please try again.");
-                  console.error(error);
-                }
-              }}
-              className="space-y-6 overflow-y-auto mt-4 flex-1 max-h-[600px]"
-            >
+      setLoading(true);
+      setSuccessMessage("Sending...");
+
+      try {
+        const formData = {
+          platform: "Product Enquiry Form - Titanium Dioxide Wholesaler",
+          platformEmail: "sales@aanyaenterprise.com",
+          name,
+          phone,
+          email,
+          place: "N/A",
+          product,
+          message,
+        };
+
+        const { data } = await axios.post(
+          "https://brandbnalo.com/api/form/add",
+          formData
+        );
+
+        if (data?.success) {
+          setSubmitted(true);
+          setSuccessMessage("✅ Your enquiry has been submitted successfully!");
+
+          const whatsappText = `Hi, I am ${name}.
+Email: ${email}
+Product: ${product}
+
+Message: ${message}
+
+Contact: ${phone}`;
+
+          const waUrl = `https://wa.me/+918527557778?text=${encodeURIComponent(
+            whatsappText
+          )}`;
+
+          setTimeout(() => {
+            window.open(waUrl, "_blank");
+          }, 1000);
+
+          form.reset();
+
+          setTimeout(() => {
+            setSubmitted(false);
+          }, 4000);
+        } else {
+          setSuccessMessage("❌ Failed to send. Please try again.");
+        }
+      } catch (error) {
+        console.error(error);
+        setSuccessMessage("❌ Server error. Try again later.");
+      } finally {
+        setLoading(false);
+      }
+    }}
+    className="space-y-6 overflow-y-auto mt-4 flex-1 max-h-[600px]"
+  >
+
               {/* FormSubmit hidden fields */}
               <input type="hidden" name="_captcha" value="false" />
                <input type="hidden" name="_cc" value="inquiry.promozione@gmail.com" />

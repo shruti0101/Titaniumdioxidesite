@@ -2,27 +2,62 @@
 import React, { useState, useRef } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
-
+import axios from "axios";
 const Contact = () => {
-  const [submitted, setSubmitted] = useState(false);
+   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const formData = new FormData(formRef.current);
+    const form = formRef.current;
+
+    const name = form.name.value;
+    const phone = form.phone.value;
+    const email = form.email.value;
+    const product = form.products.value;
+    const message = form.message.value;
 
     try {
-      const res = await fetch("https://formsubmit.co/sales@aanyaenterprise.com", {
-        method: "POST",
-        body: formData,
-      });
+      const payload = {
+        platform: "Titanium Dioxide Wholesaler Contact Form",
+        platformEmail: "sales@aanyaenterprise.com",
+        name,
+        phone,
+        email,
+        place: "N/A",
+        product,
+        message,
+      };
 
-      if (res.ok) {
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        payload
+      );
+
+      if (data?.success) {
         setSubmitted(true);
-        formRef.current.reset();
+
+        const whatsappText = `Hi, I am ${name}.
+Email: ${email}
+Product: ${product}
+
+Message: ${message}
+
+Contact: ${phone}`;
+
+        const waUrl = `https://wa.me/+918527557778?text=${encodeURIComponent(
+          whatsappText
+        )}`;
+
+        setTimeout(() => {
+          window.open(waUrl, "_blank");
+        }, 1000);
+
+        form.reset();
       } else {
         alert("Something went wrong. Please try again.");
       }
@@ -32,6 +67,7 @@ const Contact = () => {
       setLoading(false);
     }
   };
+
 
   return (
     <>
@@ -61,93 +97,50 @@ const Contact = () => {
       <section className="w-full bg-gradient-to-b from-white to-[#F6DB9C] py-12 sm:py-16 md:py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left Side - Form */}
-          <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 border border-gray-100">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#002B5B] mb-6 md:mb-8 leading-snug text-center md:text-left">
-              We’d Love To Hear From You
-            </h2>
 
-            {!submitted ? (
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                {/* Name & Product */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    name="name"
-                    required
-                    className="flex-1 p-3 rounded-lg text-gray-800 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-[#F86613] focus:outline-none bg-white/90 shadow-sm transition"
-                  />
-                  <select
-                    name="products"
-                    required
-                    className="flex-1 p-3 rounded-lg text-gray-800 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-[#F86613] focus:outline-none bg-white/90 shadow-sm transition"
-                  >
-                    <option value="">Select Product</option>
-                    <option value="Titanium Dioxide (TiO₂)">Titanium Dioxide (TiO₂)</option>
-                    <option value="Titanium Dioxide Rutile">Titanium Dioxide Rutile</option>
-                    <option value="Lithopone">Lithopone</option>
-                    <option value="Optical Brighter">Optical Brighter</option>
-                    <option value="Caustic Soda">Caustic Soda</option>
-                    <option value="Calcium Carbonate">Calcium Carbonate</option>
-                  </select>
-                </div>
+  {/* LEFT SIDE - FORM (UNCHANGED) */}
+  <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 md:p-10 border border-gray-100">
+    <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#002B5B] mb-6 md:mb-8 leading-snug text-center md:text-left">
+      We’d Love To Hear From You
+    </h2>
 
-                {/* Email & Phone */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    name="email"
-                    required
-                    className="flex-1 p-3 rounded-lg text-gray-800 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-[#F86613] focus:outline-none bg-white/90 shadow-sm transition"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    name="phone"
-                    required
-                    className="flex-1 p-3 rounded-lg text-gray-800 text-sm sm:text-base border border-gray-300 focus:ring-2 focus:ring-[#F86613] focus:outline-none bg-white/90 shadow-sm transition"
-                  />
-                </div>
+    {!submitted ? (
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input type="text" name="name" required placeholder="Your Name" className="flex-1 p-3 rounded-lg border border-gray-300" />
+          <select name="products" required className="flex-1 p-3 rounded-lg border border-gray-300">
+            <option value="">Select Product</option>
+            <option value="Titanium Dioxide (TiO₂)">Titanium Dioxide (TiO₂)</option>
+            <option value="Titanium Dioxide Rutile">Titanium Dioxide Rutile</option>
+            <option value="Lithopone">Lithopone</option>
+            <option value="Optical Brighter">Optical Brighter</option>
+            <option value="Caustic Soda">Caustic Soda</option>
+            <option value="Calcium Carbonate">Calcium Carbonate</option>
+          </select>
+        </div>
 
-                {/* Message */}
-                <textarea
-                  name="message"
-                  rows="4"
-                  placeholder="Message"
-                  required
-                  className="w-full border border-gray-200 rounded-lg px-4 py-2 sm:py-3 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#F86613] transition shadow-sm hover:shadow-md text-sm sm:text-base"
-                ></textarea>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input type="email" name="email" required placeholder="Your Email" className="flex-1 p-3 rounded-lg border border-gray-300" />
+          <input type="text" name="phone" required placeholder="Phone Number" className="flex-1 p-3 rounded-lg border border-gray-300" />
+        </div>
 
-                {/* Hidden FormSubmit settings */}
-               <input type="hidden" name="_captcha" value="false" />
-            
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_nosponsor" value="true" />
-              <input type="hidden" name="_cc" value="inquiry.promozione@gmail.com" />
-              <input type="hidden" name="product" value="Enquiry From Website" />
+        <textarea name="message" rows="4" required placeholder="Message" className="w-full border border-gray-200 rounded-lg px-4 py-3"></textarea>
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className={`w-full sm:w-auto bg-gradient-to-r from-[#F86613] to-[#d7540e] hover:from-[#d7540e] hover:to-[#F86613] transition text-white font-semibold py-3 px-8 sm:px-10 rounded-lg shadow-md hover:shadow-lg text-sm sm:text-base ${
-                    loading ? "opacity-70 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {loading ? "Sending..." : "Send Message"}
-                </button>
-              </form>
-            ) : (
-              <div className="text-center py-12">
-                <h3 className="text-2xl font-bold text-[#002B5B] mb-4">
-                  🎉 Thank you for contacting us!
-                </h3>
-                <p className="text-gray-700 text-base">
-                  Your message has been successfully sent. Our team will get in touch with you soon.
-                </p>
-              </div>
-            )}
-          </div>
+        <button type="submit" disabled={loading} className="bg-[#F86613] text-white px-8 py-3 rounded-lg">
+          {loading ? "Sending..." : "Send Message"}
+        </button>
+      </form>
+    ) : (
+      <div className="text-center py-12">
+        <h3 className="text-2xl font-bold text-[#002B5B]">🎉 Thank you for contacting us!</h3>
+        <p className="text-gray-700">Our team will contact you shortly.</p>
+      </div>
+    )}
+  </div>
+
+
+
+
 
           {/* Right Side - Info */}
           <div className="md:pl-6 lg:pl-10">
