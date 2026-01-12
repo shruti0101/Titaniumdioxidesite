@@ -11,14 +11,15 @@ import Quality from "@/components/Landingpage/Quality"
  import Faq from "@/components/Landingpage/Faq"
  import Form from "@/components/Landingpage/Form"
 import Testimonial from "@/components/Landingpage/Testmonial";
-import Popup from "@/components/Popup"
+
 import Enquiry from "@/components/Enquiry"
+import Citeskeyword from "@/components/Citieskeyword";
 export default function Home() {
   return (
 <>
 
 
-<Popup></Popup>
+
 <Hero></Hero>
 <Enquiry></Enquiry>
 <AboutUs></AboutUs>
@@ -38,7 +39,7 @@ export default function Home() {
 <Quality></Quality>
 <Testimonial></Testimonial>
 <Faq></Faq>
-
+<Citeskeyword></Citeskeyword>
 </>
   );
 }

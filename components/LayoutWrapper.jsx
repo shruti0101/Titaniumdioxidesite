@@ -12,6 +12,8 @@ export default function LayoutWrapper({ children }) {
 
   return (
     <>
+
+    
       {!hideLayout && <Navbar />}
       {children}
       {!hideLayout && <Footer />}
