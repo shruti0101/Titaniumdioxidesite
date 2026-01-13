@@ -122,7 +122,8 @@ export async function generateStaticParams() {
 
 /* ✅ SEO METADATA */
 export async function generateMetadata({ params }) {
-  const slug = params.location;
+  
+  const slug =  params.location;
 
   const city = slug
     .replace("titanium-dioxide-wholesaler-in-", "")
