@@ -12,71 +12,71 @@ export const categories = [
 
     products: [
       // product 1
-      {
-        id: "titanium-dioxide-kronos-r2220",
-        name: "Titanium Dioxide Kronos R2220",
-        metaTitle: "Titanium Dioxide Kronos R2220 – Bright Bluetone Pigment",
-        metaDescription:
-          "Get Kronos R2220 from Aanya Enterprises. High-purity Rutile TiO₂ with exceptional brightness and durability. Ideal for PVC, masterbatch, and outdoor coatings.",
-        description: [
-          {
-            type: "h2",
-            text: "Titanium Dioxide (TiO₂) – Kronos R2220 | Aanya Enterprises",
-          },
-          {
-            type: "p",
-            text: "Aanya Enterprises offers 25 kg powder bags of high-purity TiO₂ grade, Titanium Dioxide Kronos R2220, which is sourced from China. This product, which has a unique bluetone tint and a 98% purity level, is made to provide exceptional brightness, opacity, and durability in a range of industrial applications. Paints, plastic masterbatches, printing inks, powder coatings, laminated paper, and solvent-based coatings are just a few of the sectors that employ Kronos R2220 extensively. Because of its performance qualities, it is perfect for applications both indoors and outdoors where color constancy and durability are crucial.",
+    //   {
+    //     id: "titanium-dioxide-kronos-r2220",
+    //     name: "Titanium Dioxide Kronos R2220",
+    //     metaTitle: "Titanium Dioxide Kronos R2220 – Bright Bluetone Pigment",
+    //     metaDescription:
+    //       "Get Kronos R2220 from Aanya Enterprises. High-purity Rutile TiO₂ with exceptional brightness and durability. Ideal for PVC, masterbatch, and outdoor coatings.",
+    //     description: [
+    //       {
+    //         type: "h2",
+    //         text: "Titanium Dioxide (TiO₂) – Kronos R2220 | Aanya Enterprises",
+    //       },
+    //       {
+    //         type: "p",
+    //         text: "Aanya Enterprises offers 25 kg powder bags of high-purity TiO₂ grade, Titanium Dioxide Kronos R2220, which is sourced from China. This product, which has a unique bluetone tint and a 98% purity level, is made to provide exceptional brightness, opacity, and durability in a range of industrial applications. Paints, plastic masterbatches, printing inks, powder coatings, laminated paper, and solvent-based coatings are just a few of the sectors that employ Kronos R2220 extensively. Because of its performance qualities, it is perfect for applications both indoors and outdoors where color constancy and durability are crucial.",
 
             
-          },
-    {
-            type: "ul",
-            items: [
-              "Highly Recommended for PVC Profile(Plastic)",
+    //       },
+    // {
+    //         type: "ul",
+    //         items: [
+    //           "Highly Recommended for PVC Profile(Plastic)",
 
-              "Recommended for MasterBatch(Plastic)",
+    //           "Recommended for MasterBatch(Plastic)",
 
            
-            ],
-          },
+    //         ],
+    //       },
    
 
 
 
 
-          { type: "h2", text: "Key Features – Titanium Dioxide Kronos R2220" },
-          {
-            type: "ul",
-            items: [
-              "Superior Purity (98%) -provides consistent, high-quality output with fewer contaminants and outstanding performance.",
+    //       { type: "h2", text: "Key Features – Titanium Dioxide Kronos R2220" },
+    //       {
+    //         type: "ul",
+    //         items: [
+    //           "Superior Purity (98%) -provides consistent, high-quality output with fewer contaminants and outstanding performance.",
 
-              "Bright Bluetone Shade increases colour brightness and whiteness, making final products more aesthetically pleasing.",
+    //           "Bright Bluetone Shade increases colour brightness and whiteness, making final products more aesthetically pleasing.",
 
-              "Broad Range of Applications– Ideal for usage in industrial inks, laminated papers, wall paints, plastic products, and coatings.",
+    //           "Broad Range of Applications– Ideal for usage in industrial inks, laminated papers, wall paints, plastic products, and coatings.",
 
-              "Reliable Packaging & Brand – Imported from China, delivered under the Kronos brand, and conveniently packaged in 25 kg bags for storage and transportation.",
+    //           "Reliable Packaging & Brand – Imported from China, delivered under the Kronos brand, and conveniently packaged in 25 kg bags for storage and transportation.",
 
-              "Outstanding resilience to weather and durability – maintains colour quality and offers long-lasting coverage in a variety of environmental settings.",
-            ],
-          },
-        ],
+    //           "Outstanding resilience to weather and durability – maintains colour quality and offers long-lasting coverage in a variety of environmental settings.",
+    //         ],
+    //       },
+    //     ],
 
-        specs: [
-          { label: "Usage/Application", value: "Plastics" },
-          { label: "CAS Number", value: "13463-67-7" },
-          { label: "Polymorph Form", value: "Rutile" },
-          { label: "Packaging Type", value: "25 kg bag" },
-          { label: "Form", value: "Powder" },
-          { label: "Packaging Size", value: "25 kg" },
-        ],
+    //     specs: [
+    //       { label: "Usage/Application", value: "Plastics" },
+    //       { label: "CAS Number", value: "13463-67-7" },
+    //       { label: "Polymorph Form", value: "Rutile" },
+    //       { label: "Packaging Type", value: "25 kg bag" },
+    //       { label: "Form", value: "Powder" },
+    //       { label: "Packaging Size", value: "25 kg" },
+    //     ],
 
-        image: [
-          {
-            src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819180/31_fnfc32.webp",
-            alt: " Titanium Dioxide Kronos R2220",
-          },
-        ],
-      },
+    //     image: [
+    //       {
+    //         src: "https://res.cloudinary.com/dzbkxqqo9/image/upload/v1759819180/31_fnfc32.webp",
+    //         alt: " Titanium Dioxide Kronos R2220",
+    //       },
+    //     ],
+    //   },
 
       // product 2
       {
