@@ -66,6 +66,7 @@ const Footer = () => {
                 { name: "Our Products", href: "/products" },
                 { name: "Our Blog", href: "/blogs" },
                 { name: "Contact Us", href: "/contact-us" },
+                { name: "Sitemap ", href: "/sitemap" },
                 // { name: "Privacy Policy", href: "/privacy-policy" },
                 // { name: "Terms & Conditions", href: "/terms" },
               
