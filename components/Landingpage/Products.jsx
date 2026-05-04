@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 const services = [
   {
@@ -71,42 +73,61 @@ export default function ServicesGrid() {
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2  lg:grid-cols-4 gap-4">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              onClick={() => setActiveCard(index)}
-              className="relative group cursor-pointer rounded-xl overflow-hidden shadow-lg"
+      
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          onClick={() => setActiveCard(index)}
+          className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {/* Image */}
+          <Link href={service.link}>
+            <img
+              src={service.image}
+              alt={service.title}
+              title={service.title}
+              className={`w-full object-contain transition-all duration-500
+              ${
+                activeCard === index
+                  ? "scale-105"
+                  : "group-hover:scale-105"
+              }`}
+            />
+          </Link>
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition duration-300" />
+
+          {/* Content */}
+          <div className="absolute bottom-3 left-0 w-full px-3 text-center text-white z-10">
+            <h3 className="text-lg md:text-2xl font-semibold">
+              {service.title}
+            </h3>
+
+            {/* WhatsApp Button */}
+            <a
+              href={`https://wa.me/+918527557778?text=Hi, I'm interested in ${service.title}`}
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+              className="mt-2 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm md:text-lg px-3 py-1.5 rounded-full shadow-md transition-all duration-300 opacity-1000"
             >
-              <Link href={service.link}>
- {/* Image */}
-              <img
-                src={service.image}
-                alt={service.title}
-                title={service.title}
-                className={`w-full  object-contain transition-all duration-500
-                ${activeCard === index ? "scale-105" : "group-hover:scale-105 "}`}
-              />
-              </Link>
+              <FaWhatsapp className="text-md" />
+              WhatsApp Now
+            </a>
+          </div>
 
-             
-
-              {/* Content */}
-              <div className="text-center p-2 md:absolute bottom-3 left-0 text-black">
-                <h3 className="mx-auto md:text-xl font-semibold ">{service.title}</h3>
-            
-              </div>
-
-              {/* Arrow */}
-              {activeCard !== index && (
-                <div className="absolute top-3 right-3 bg-[#F8CC19] p-2 md:p-4 rounded-full transition-opacity group-hover:opacity-100 opacity-90">
-                  <ArrowUpRight className="w-4 h-4 text-white" />
-                </div>
-              )}
+          {/* Arrow */}
+          {activeCard !== index && (
+            <div className="absolute top-3 right-3 bg-[#F8CC19] p-2 md:p-3 rounded-full transition-all duration-300 opacity-90 group-hover:opacity-100 z-10">
+              <ArrowUpRight className="w-4 h-4 text-white" />
             </div>
-          ))}
+          )}
         </div>
+      ))}
+    </div>
+
+
         <div className="mt-8 flex justify-center items-center">
           <Link
             href="/products"
